@@ -2,7 +2,7 @@
 
 **Статус: PASS**
 
-Режим: проверка сохранённых данных
+Режим: полный повтор расчётов
 
 ## Этапы
 
@@ -10,9 +10,12 @@
 - PASS: Finite-state and schedule enumeration
 - PASS: Exact theory and partition checks
 - PASS: Equality-evidence graph checks
+- PASS: Regenerate 960 mode runs and bootstrap intervals
 - PASS: Independent validation of all 3,840,000 reads
 - PASS: Independent arrival-timeline and interval reconstruction
 - PASS: Agreement with manuscript results
+- PASS: Exact read timeline, manuscript tables and figure identities
+- PASS: Regenerated outputs match supplied reference
 
 ## Основные результаты
 
@@ -22,7 +25,7 @@
 | Прогоны режимов | 960 |
 | Запланированные чтения | 3,840,000 |
 | C05 R0 смешанные чтения | 62.1444% |
-| C05 R0 полнота состояния | 100% |
+| C05 R0 полнота состояния | 100.00% |
 | R1 смешанные чтения во всех условиях | 0 |
 | C06 R1 свежие согласованные состояния | 95,50% |
 | C12 R1 свежие согласованные состояния | 94,49% |

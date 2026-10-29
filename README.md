@@ -1,8 +1,8 @@
 # Snapshot coherence in unidirectional industrial telemetry
 
-Companion code and synthetic data for Aibar Ibragimov's article **Verifying State Snapshot Coherence in Unidirectional Industrial Telemetry**.
+Companion code and synthetic data for **Verifying State Snapshot Coherence in Unidirectional Industrial Telemetry**, by Aibar Ibragimov, Leila Rzayeva and Laura Aldasheva.
 
-This is a private repository. Reviewers need repository access before they can follow the manuscript's link. The reference revision is tagged `article1-revision-20261029`.
+This is a private repository. Reviewers need repository access before they can follow the manuscript's link. The verified revision is tagged `article1-verified-20261029`; the earlier `article1-revision-20261029` remains unchanged.
 
 ## Run the study
 
@@ -18,7 +18,7 @@ This verifies file hashes, reruns finite and theory checks, independently recons
 python reproduce.py --full
 ```
 
-This additionally regenerates the simulation and bootstrap analysis in a temporary copy, then compares the regenerated numeric outputs and decompressed reading log with the supplied reference. Saved files under `study/` are never overwritten. The last completed run replaces the reports.
+This additionally removes all 29 copied numeric output files from a temporary study copy, regenerates the simulation and bootstrap analysis, then compares newly created outputs and decompressed readings with the reference. A generator that fails to create an expected file causes FAIL. Saved evidence under `study/` is never overwritten. The last completed run replaces the reports.
 
 ## Understand the output
 
@@ -51,8 +51,12 @@ All timings, losses and source values are synthetic. Shared random inputs couple
 | `study/simulation/paired_contrasts.csv` | Paired R0 minus R1 contrasts |
 | `study/simulation/validate_reading_log.py` | Independent streamed reconstruction |
 | `study/audit_study/audit_independent.py` | Independent sorted-arrival reconstruction and interval checks |
-| `study/figures/` | Figure exports used in the article |
+| `study/figures/` | Original computational-package figure exports retained unchanged |
+| `manuscript/figures/` | Exact six figure images embedded in the current Word article |
+| `audit_evidence.py` | Independent comparison of every logged read with the scheduled event timeline, 48 numeric table cells and exact manuscript artwork |
 
 The runner does not regenerate the Word layout or figure exports. The industrial pump scenario added in the revision is an illustrative application example, not an additional physical experiment or simulation dataset.
 
 Run the runner's regression tests with `python -m unittest discover -s tests -v`.
+
+The deeper audit checks every `(condition, seed, mode, read time, online status, x origin, y origin)` tuple against independently sorted arrivals. It rejects missing/extra reads, timestamp duplicates and wrong origins even if aggregate percentages would coincide. It also checks the 250–280-word abstract, 20 references in first-citation order and the three author identities and ORCID checksums. `docs/TRACEABILITY.md` maps article claims to the code and evidence. `reports/FINAL_AUDIT.json` records the frozen revision audit; `reports/verification_summary.json` records the latest local run.

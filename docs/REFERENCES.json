@@ -1,0 +1,82 @@
+[
+  {
+    "number": 1,
+    "citation": "Stouffer, K., Pease, M., Tang, C., Zimmerman, T., Pillitteri, V., Lightman, S., Hahn, A., Saravia, S., Sherule, A., & Thompson, M. (2023). Guide to operational technology (OT) security (NIST SP 800-82 Rev. 3). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-82r3"
+  },
+  {
+    "number": 2,
+    "citation": "Anton, A.-A., Csereoka, P., Capota, E. A., & Cioargă, R.-D. (2024). Enhancing syslog message security and reliability over unidirectional fiber optics. Sensors, 24(20), Article 6537. https://doi.org/10.3390/s24206537"
+  },
+  {
+    "number": 3,
+    "citation": "Herlihy, M., Shavit, N., Luchangco, V., & Spear, M. (2020). The art of multiprocessor programming (2nd ed.). Morgan Kaufmann. https://www.sciencedirect.com/book/9780124159501/the-art-of-multiprocessor-programming"
+  },
+  {
+    "number": 4,
+    "citation": "van Steen, M., & Tanenbaum, A. S. (2023). Distributed systems (4th ed.). distributed-systems.net. https://www.distributed-systems.net/index.php/books/ds4/"
+  },
+  {
+    "number": 5,
+    "citation": "Basin, D., Klaedtke, F., & Zălinescu, E. (2020). Runtime verification over out-of-order streams. ACM Transactions on Computational Logic, 21(1), Article 5. https://doi.org/10.1145/3355609"
+  },
+  {
+    "number": 6,
+    "citation": "Bartocci, E., Falcone, Y., Francalanza, A., & Reger, G. (2018). Introduction to runtime verification. In E. Bartocci & Y. Falcone (Eds.), Lectures on runtime verification (pp. 1–33). Springer. https://doi.org/10.1007/978-3-319-75632-5_1"
+  },
+  {
+    "number": 7,
+    "citation": "Cimatti, A., Grosen, T. M., Larsen, K. G., Tonetta, S., & Zimmermann, M. (2026). Exploiting assumptions for effective monitoring of real-time properties under partial observability. Software and Systems Modeling. Advance online publication. https://doi.org/10.1007/s10270-026-01394-6"
+  },
+  {
+    "number": 8,
+    "citation": "Kallwies, H., Leucker, M., & Sánchez, C. (2022). Symbolic runtime verification for monitoring under uncertainties and assumptions [Preprint]. arXiv. https://doi.org/10.48550/arXiv.2207.05678"
+  },
+  {
+    "number": 9,
+    "citation": "OPC Foundation. (n.d.). OPC Unified Architecture Part 25: Object Serialization (Section 4.5). Retrieved October 29, 2026, from https://reference.opcfoundation.org/specs/OPC-10000-25/4.5"
+  },
+  {
+    "number": 10,
+    "citation": "OPC Foundation. (n.d.). OPC Unified Architecture Part 14: PubSub (Section 5.3.3). Retrieved October 29, 2026, from https://reference.opcfoundation.org/specs/OPC-10000-14/5.3.3"
+  },
+  {
+    "number": 11,
+    "citation": "OPC Foundation. (n.d.). OPC Unified Architecture Part 3: Address Space Model (Section 8.58). Retrieved October 29, 2026, from https://reference.opcfoundation.org/specs/OPC-10000-3/8.58"
+  },
+  {
+    "number": 12,
+    "citation": "OPC Foundation. (n.d.). OPC Unified Architecture Part 4: Services (Section 5.11.2). Retrieved October 29, 2026, from https://reference.opcfoundation.org/specs/OPC-10000-4/5.11.2"
+  },
+  {
+    "number": 13,
+    "citation": "Yates, R. D., Sun, Y., Brown, D. R., III, Kaul, S. K., Modiano, E., & Ulukus, S. (2021). Age of information: An introduction and survey. IEEE Journal on Selected Areas in Communications, 39(5), 1183–1210. https://doi.org/10.1109/JSAC.2021.3065072"
+  },
+  {
+    "number": 14,
+    "citation": "Li, H., Tang, L., Chen, S., Zheng, L., & Zhong, S. (2024). AoI-aware resource scheduling for industrial IoT with deep reinforcement learning. Electronics, 13(6), Article 1104. https://doi.org/10.3390/electronics13061104"
+  },
+  {
+    "number": 15,
+    "citation": "L’Ecuyer, P. (2017, February). Random number generation with multiple streams for sequential and parallel computing [Lecture slides]. Université de Montréal. https://www-labs.iro.umontreal.ca/~lecuyer/myftp/slides/parallel-rng-mit17.pdf"
+  },
+  {
+    "number": 16,
+    "citation": "Python Software Foundation. (n.d.). random — Generate pseudo-random numbers. Python 3.12 documentation. Retrieved October 29, 2026, from https://docs.python.org/3.12/library/random.html"
+  },
+  {
+    "number": 17,
+    "citation": "Efron, B., & Narasimhan, B. (2020). The automatic construction of bootstrap confidence intervals. Journal of Computational and Graphical Statistics, 29(3), 608–619. https://doi.org/10.1080/10618600.2020.1714633"
+  },
+  {
+    "number": 18,
+    "citation": "Monks, T., Currie, C. S. M., Onggo, B. S., Robinson, S., Kunc, M., & Taylor, S. J. E. (2019). Strengthening the reporting of empirical simulation studies: Introducing the STRESS guidelines. Journal of Simulation, 13(1), 55–67. https://doi.org/10.1080/17477778.2018.1442155"
+  },
+  {
+    "number": 19,
+    "citation": "National Academies of Sciences, Engineering, and Medicine. (2019). Reproducibility and replicability in science. The National Academies Press. https://doi.org/10.17226/25303"
+  },
+  {
+    "number": 20,
+    "citation": "Ibragimov, A. (2026). Snapshot coherence in unidirectional industrial telemetry (Version article1-verified-20261029) [Source code and synthetic data]. GitHub. https://github.com/aizexss/unidirectional/tree/article1-verified-20261029"
+  }
+]

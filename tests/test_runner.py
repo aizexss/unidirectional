@@ -9,6 +9,9 @@ import sys
 import tempfile
 import unittest
 from fractions import Fraction
+import shutil
+import os
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('reproduce', ROOT / 'reproduce.py')
@@ -17,6 +20,34 @@ spec.loader.exec_module(runner)
 
 
 class VerificationFailures(unittest.TestCase):
+    def test_environment_cannot_disable_child_assertions_or_inject_packages(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            (root/'check.py').write_text('import sys\nassert sys.flags.isolated\nassert not sys.flags.optimize\n')
+            with patch.dict(os.environ,{'PYTHONOPTIMIZE':'2','PYTHONPATH':directory}):
+                runner.execute('check.py',root,root,'Isolated verification')
+
+    def test_full_run_cannot_reuse_old_outputs_if_generator_does_nothing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory); reference=root/'reference'; regenerated=root/'regenerated'
+            for folder in ('model','theory','graph_validation','simulation'):
+                (reference/folder).mkdir(parents=True)
+                (reference/folder/'answer.csv').write_text('value\n42\n')
+                (reference/folder/'noop.py').write_text('pass\n')
+            self.assertEqual(runner.prepare_study(reference,regenerated,True),4)
+            self.assertTrue((reference/'model/answer.csv').is_file())
+            self.assertTrue((regenerated/'model/noop.py').is_file())
+            runner.execute('model/noop.py',regenerated,root,'No-op generator')
+            with self.assertRaisesRegex(ValueError,'Regenerator did not create'):
+                runner.compare_regenerated(reference,regenerated)
+
+    def test_verify_only_keeps_supplied_data_in_its_temporary_copy(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory); source=root/'source'; source.mkdir()
+            (source/'evidence.csv').write_text('read\n1\n')
+            self.assertEqual(runner.prepare_study(source,root/'copy',False),0)
+            self.assertEqual((root/'copy/evidence.csv').read_bytes(),(source/'evidence.csv').read_bytes())
+
     def test_percentage_rounding_at_decimal_halfway_is_consistent(self):
         self.assertEqual(runner.display_mean_percent([Fraction(19099,20000)]), '95.50')
         self.assertEqual(runner.display_mean_percent([Fraction(18897,20000)]), '94.49')

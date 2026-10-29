@@ -9,6 +9,8 @@ import csv
 import gzip
 import hashlib
 import json
+import importlib.util
+import platform
 import shutil
 import subprocess
 import sys
@@ -53,10 +55,32 @@ def execute(script, study, reports, stage):
     log = reports / (script.replace('/', '_') + '.log')
     with log.open('w', encoding='utf-8') as output:
         process = subprocess.run(
-            [sys.executable, '-X', 'utf8', str(study / script)],
+            [sys.executable, '-I', '-X', 'utf8', str(study / script)],
             cwd=study, stdout=output, stderr=subprocess.STDOUT, check=False,
         )
     require(process.returncode == 0, f'{stage} failed; see {log}')
+
+
+def prepare_study(reference, destination, full):
+    """Full reproduction must create outputs, not inherit a previous answer."""
+    shutil.copytree(reference, destination)
+    removed = 0
+    if full:
+        for folder in ('model', 'theory', 'graph_validation', 'simulation'):
+            for path in (destination / folder).iterdir():
+                if path.is_file() and path.suffix in ('.csv', '.json', '.gz'):
+                    require(path.resolve().is_relative_to(destination.resolve()), 'Unsafe output path')
+                    path.unlink()
+                    removed += 1
+    return removed
+
+
+def run_evidence_audit(study):
+    # Resolve our own module explicitly, including under Python's isolated -I mode.
+    spec = importlib.util.spec_from_file_location('article_evidence_audit', ROOT / 'audit_evidence.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.audit_all(study, ROOT / 'manuscript')
 
 
 def same_content(reference, regenerated):
@@ -79,7 +103,9 @@ def compare_regenerated(reference, regenerated):
         for path in sorted((reference / folder).iterdir()):
             if path.suffix not in ('.csv', '.json', '.gz'):
                 continue
-            require(same_content(path, regenerated / folder / path.name), 'Regenerated output differs: ' + str(path.relative_to(reference)))
+            actual = regenerated / folder / path.name
+            require(actual.is_file(), 'Regenerator did not create: ' + str(path.relative_to(reference)))
+            require(same_content(path, actual), 'Regenerated output differs: ' + str(path.relative_to(reference)))
             checked += 1
     return checked
 
@@ -144,12 +170,14 @@ def write_reports(reports, summary):
                   f"| Conditions | {values['conditions']} |", f"| Mode runs | {values['mode_runs']} |",
                   f"| Scheduled reads | {values['scheduled_reads']:,} |",
                   f"| C05 R0 actual mixed reads | {values['C05_R0_actual_mixed_percent']:.4f}% |",
-                  '| C05 R0 complete-state availability | 100% |', '| R1 mixed reads across conditions | 0 |']
+                  f"| C05 R0 complete-state availability | {values['C05_R0_complete_percent']:.2f}% |",
+                  f"| R1 mixed reads across conditions | {values['R1_actual_mixed_reads_all_conditions']} |"]
         for condition, value in values['no_loss_values_detection_percent_given_mixed'].items():
             lines.append(f'| {condition} V detection conditional on mixing | {value:.3f}% |')
-        lines += ['| C06 R1 fresh coherent availability | 95.50% |',
-                  '| C12 R1 fresh coherent availability | 94.49% |',
-                  '| C05 R0 V coverage | 30.90% |', '',
+        rounded = values['corrected_table_percentages']
+        lines += [f"| C06 R1 fresh coherent availability | {rounded['C06_R1_fresh_coherent_percent']}% |",
+                  f"| C12 R1 fresh coherent availability | {rounded['C12_R1_fresh_coherent_percent']}% |",
+                  f"| C05 R0 V coverage | {rounded['C05_R0_V_conclusive_percent']}% |", '',
                   'Displayed table percentages use decimal half-up rounding of exact count ratios.']
     lines += ['', '## Interpretation', '',
               'All results concern an executed synthetic model. No physical data-diode performance is measured.',
@@ -170,10 +198,11 @@ def write_reports(reports, summary):
                     f"| Условия | {values['conditions']} |", f"| Прогоны режимов | {values['mode_runs']} |",
                     f"| Запланированные чтения | {values['scheduled_reads']:,} |",
                     f"| C05 R0 смешанные чтения | {values['C05_R0_actual_mixed_percent']:.4f}% |",
-                    '| C05 R0 полнота состояния | 100% |', '| R1 смешанные чтения во всех условиях | 0 |']
-        russian += ['| C06 R1 свежие согласованные состояния | 95,50% |',
-                    '| C12 R1 свежие согласованные состояния | 94,49% |',
-                    '| C05 R0 покрытие V | 30,90% |', '',
+                    f"| C05 R0 полнота состояния | {values['C05_R0_complete_percent']:.2f}% |",
+                    f"| R1 смешанные чтения во всех условиях | {values['R1_actual_mixed_reads_all_conditions']} |"]
+        russian += [f"| C06 R1 свежие согласованные состояния | {rounded['C06_R1_fresh_coherent_percent'].replace('.', ',')}% |",
+                    f"| C12 R1 свежие согласованные состояния | {rounded['C12_R1_fresh_coherent_percent'].replace('.', ',')}% |",
+                    f"| C05 R0 покрытие V | {rounded['C05_R0_V_conclusive_percent'].replace('.', ',')}% |", '',
                     'Проценты округлены десятичным правилом half-up из точных долей счётчиков.']
     russian += ['', '## Как понимать результат', '',
                 'Исследование синтетическое. Производительность физического оборудования не измерялась.',
@@ -193,7 +222,8 @@ def main(argv=None):
     reports = ROOT / 'reports'
     reports.mkdir(exist_ok=True)
     summary = {'status': 'RUNNING', 'mode': 'full' if args.full else 'verify-only',
-               'checked_at_utc': datetime.now(timezone.utc).isoformat(), 'stages': []}
+               'checked_at_utc': datetime.now(timezone.utc).isoformat(), 'stages': [],
+               'python_version': platform.python_version(), 'platform': platform.platform()}
     stage_name = 'File integrity'
     try:
         summary['manifest_files_verified'] = verify_manifest(ROOT)
@@ -201,7 +231,9 @@ def main(argv=None):
         print('[PASS] File integrity: ' + str(summary['manifest_files_verified']) + ' files', flush=True)
         with tempfile.TemporaryDirectory(prefix='article1-rerun-') as workspace:
             study = Path(workspace) / 'study'
-            shutil.copytree(ROOT / 'study', study)
+            summary['preexisting_outputs_removed'] = prepare_study(ROOT / 'study', study, args.full)
+            if args.full:
+                print('Clean regeneration: removed ' + str(summary['preexisting_outputs_removed']) + ' copied outputs', flush=True)
             scripts = [('model/run_model.py', 'Finite-state and schedule enumeration'),
                        ('theory/verify_theory.py', 'Exact theory and partition checks'),
                        ('graph_checks.py', 'Equality-evidence graph checks')]
@@ -217,6 +249,11 @@ def main(argv=None):
             stage_name = 'Agreement with manuscript results'
             summary['results'] = principal_results(study)
             summary['stages'].append({'name': stage_name, 'status': 'PASS'})
+            stage_name = 'Exact read timeline, manuscript tables and figure identities'
+            print('Checking exact read timeline, manuscript tables and figures ...', flush=True)
+            summary['evidence_audit'] = run_evidence_audit(study)
+            summary['stages'].append({'name': stage_name, 'status': 'PASS'})
+            print('        PASS: every scheduled read, 48 table cells and 6 manuscript figures', flush=True)
             if args.full:
                 stage_name = 'Regenerated outputs match supplied reference'
                 summary['regenerated_files_compared'] = compare_regenerated(ROOT / 'study', study)
@@ -229,7 +266,11 @@ def main(argv=None):
     write_reports(reports, summary)
     print(summary['status'] + ': ' + str(reports / 'RESULTS.md'), flush=True)
     if summary['status'] == 'PASS':
-        print('C05 R0 mixed: 62.14%; completeness: 100%; R1 mixed: 0; reads verified: 3,840,000', flush=True)
+        values = summary['results']
+        print(f"C05 R0 mixed: {values['C05_R0_actual_mixed_percent']:.2f}%; "
+              f"completeness: {values['C05_R0_complete_percent']:g}%; "
+              f"R1 mixed: {values['R1_actual_mixed_reads_all_conditions']}; "
+              f"reads verified: {values['scheduled_reads']:,}", flush=True)
     else:
         print(summary['error'], file=sys.stderr)
     return 0 if summary['status'] == 'PASS' else 1

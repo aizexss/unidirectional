@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "mode": "verify-only",
-  "checked_at_utc": "2026-10-29T14:56:14.315062+00:00",
+  "mode": "full",
+  "checked_at_utc": "2026-10-29T16:42:01.845939+00:00",
   "stages": [
     {
       "name": "File integrity",
@@ -20,6 +20,10 @@
       "status": "PASS"
     },
     {
+      "name": "Regenerate 960 mode runs and bootstrap intervals",
+      "status": "PASS"
+    },
+    {
       "name": "Independent validation of all 3,840,000 reads",
       "status": "PASS"
     },
@@ -30,9 +34,20 @@
     {
       "name": "Agreement with manuscript results",
       "status": "PASS"
+    },
+    {
+      "name": "Exact read timeline, manuscript tables and figure identities",
+      "status": "PASS"
+    },
+    {
+      "name": "Regenerated outputs match supplied reference",
+      "status": "PASS"
     }
   ],
-  "manifest_files_verified": 55,
+  "python_version": "3.12.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "manifest_files_verified": 67,
+  "preexisting_outputs_removed": 29,
   "results": {
     "conditions": 12,
     "mode_runs": 960,
@@ -52,5 +67,17 @@
       "C12_R1_fresh_coherent_percent": "94.49",
       "C05_R0_V_conclusive_percent": "30.90"
     }
-  }
+  },
+  "evidence_audit": {
+    "status": "PASS",
+    "exact_timeline_rows": 3840000,
+    "simulation_table_cells": 48,
+    "exact_manuscript_figures": 6,
+    "abstract_words": 250,
+    "abstract_characters": 1772,
+    "references_in_citation_order": 20,
+    "author_identities": 3,
+    "scope": "Declared synthetic event model; no physical-device validation"
+  },
+  "regenerated_files_compared": 29
 }
