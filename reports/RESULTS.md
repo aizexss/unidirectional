@@ -14,6 +14,9 @@ Mode: verify-only
 - PASS: Independent arrival-timeline and interval reconstruction
 - PASS: Agreement with manuscript results
 - PASS: Exact read timeline, manuscript tables and figure identities
+- PASS: Independent verification of plotted scientific values
+
+Plot values verified: 402 analytical points and 480 restart-trace reads, with run-count shares, lag summaries and age/availability intervals.
 
 ## Principal results
 

@@ -2,7 +2,7 @@
 
 Companion code and synthetic data for **Verifying State Snapshot Coherence in Unidirectional Industrial Telemetry**, by Aibar Ibragimov, Leila Rzayeva and Laura Aldasheva.
 
-This public repository contains the source code, synthetic data and manuscript. The publication version is tagged `article1-public-20261029`. No account or access request is needed to download the materials.
+This public repository contains the source code, synthetic data and manuscript. The publication version is tagged `article1-submission-20261030`. No account or access request is needed to download the materials.
 
 ## Run the study
 
@@ -55,7 +55,21 @@ All timings, losses and source values are synthetic. Shared random inputs couple
 | `manuscript/figures/` | Exact six figure images embedded in the current Word article |
 | `audit_evidence.py` | Independent comparison of every logged read with the scheduled event timeline, 48 numeric table cells and exact manuscript artwork |
 
-The runner does not regenerate the Word layout or figure exports. The industrial pump scenario added in the revision is an illustrative application example, not an additional physical experiment or simulation dataset.
+The runner verifies the supplied figure files. A separate plotting command redraws all six figures; the Word layout is checked separately. The industrial pump scenario is an illustrative application example, not an additional physical experiment or simulation dataset.
+
+## Redraw and check the figures
+
+The optional plotting environment was tested with Python 3.12 on Windows. Install its packages in a separate virtual environment:
+
+```sh
+python -m pip install -r requirements-figures.txt
+python plot_figures.py
+python audit_plots.py reports/figures
+```
+
+The plotting command writes six 600 dpi PNGs, six JPGs and `plot_evidence.json` under `reports/figures/`. It reads analytical expressions and frozen CSV files; it does not rerun the simulator or alter the source data. The independent plot audit checks 402 analytical curve points, run-count shares, lag and age summaries, and all 480 selected restart readings. Missing ages remain gaps. The reference plotting values and images are under `manuscript/figures/`.
+
+The article uses Times New Roman. If that font is unavailable, explicitly select an installed font, for example `python plot_figures.py --font "DejaVu Serif"`. Numerical values are unchanged; font metrics and raster appearance can differ between environments. Fonts and plotting libraries are not redistributed in this repository. The numerical reproduction commands above still need only Python's standard library.
 
 Run the runner's regression tests with `python -m unittest discover -s tests -v`.
 

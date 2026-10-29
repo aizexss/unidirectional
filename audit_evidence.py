@@ -111,7 +111,9 @@ def audit_timeline(study):
 
 NS = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main',
       'a': 'http://schemas.openxmlformats.org/drawingml/2006/main',
-      'r': 'http://schemas.openxmlformats.org/officeDocument/2006/relationships'}
+      'r': 'http://schemas.openxmlformats.org/officeDocument/2006/relationships',
+      'o': 'urn:schemas-microsoft-com:office:office',
+      'm': 'http://schemas.openxmlformats.org/officeDocument/2006/math'}
 
 
 def manuscript_content(path):
@@ -172,7 +174,7 @@ def audit_journal_text(paragraphs):
     )
     front = '\n'.join(paragraphs[:paragraphs.index('Introduction')])
     for name, email, orcid in identities:
-        require(front.count(name) == 1 and front.count(email) == 1 and front.count(orcid) == 1,
+        require(paragraphs.count(name) == 1 and front.count(email) == 1 and front.count(orcid) == 1,
                 'Missing or duplicate author identity: ' + name)
         require(orcid_valid(orcid), 'Invalid ORCID checksum: ' + name)
     return {'abstract_words': len(abstract.split()), 'abstract_characters': len(abstract),
@@ -192,6 +194,10 @@ def audit_manuscript(study, manuscript):
         root = ET.fromstring(archive.read('word/document.xml'))
     paragraphs = [''.join(p.itertext()) for p in root.findall('./w:body/w:p', NS)]
     journal = audit_journal_text(paragraphs)
+    equations = root.findall('.//o:OLEObject', NS)
+    require(len(equations) == 10 and all(e.get('ProgID') == 'Equation.DSMT4' and e.get('Type') == 'Embed'
+                                       for e in equations), 'Expected ten embedded MathType equations')
+    require(not root.findall('.//m:oMath', NS), 'Unconverted native Word equation remains')
     require(len(tables) == 8 and len(artwork) == 6, 'Unexpected manuscript structure')
     with (study / 'simulation/run_metrics.csv').open(encoding='utf-8', newline='') as source:
         runs = list(csv.DictReader(source))
@@ -212,7 +218,8 @@ def audit_manuscript(study, manuscript):
     for index, content in enumerate(artwork, 1):
         path = manuscript / 'figures' / f'figure-{index}.png'
         require(path.is_file() and path.read_bytes() == content, f'Published figure {index} differs from the Word manuscript')
-    return {'simulation_table_cells': checked, 'exact_manuscript_figures': len(artwork), **journal}
+    return {'simulation_table_cells': checked, 'exact_manuscript_figures': len(artwork),
+            'embedded_mathtype_equations': len(equations), **journal}
 
 
 def audit_all(study, manuscript):

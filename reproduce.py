@@ -83,6 +83,13 @@ def run_evidence_audit(study):
     return module.audit_all(study, ROOT / 'manuscript')
 
 
+def run_plot_audit():
+    spec = importlib.util.spec_from_file_location('article_plot_audit', ROOT / 'audit_plots.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.audit(ROOT / 'manuscript/figures', ROOT)
+
+
 def same_content(reference, regenerated):
     if reference.suffix == '.gz':
         with gzip.open(reference, 'rb') as left, gzip.open(regenerated, 'rb') as right:
@@ -164,6 +171,9 @@ def write_reports(reports, summary):
     lines += [f"- {stage['status']}: {stage['name']}" for stage in summary['stages']]
     if 'error' in summary:
         lines += ['', 'Error: ' + summary['error']]
+    if 'plot_audit' in summary:
+        lines += ['', 'Plot values verified: 402 analytical points and 480 restart-trace reads, '
+                  'with run-count shares, lag summaries and age/availability intervals.']
     if 'results' in summary:
         values = summary['results']
         lines += ['', '## Principal results', '', '| Measure | Result |', '| --- | ---: |',
@@ -192,6 +202,9 @@ def write_reports(reports, summary):
     russian += [f"- {stage['status']}: {stage['name']}" for stage in summary['stages']]
     if 'error' in summary:
         russian += ['', 'Причина ошибки: ' + summary['error']]
+    if 'plot_audit' in summary:
+        russian += ['', 'Графики: проверены 402 аналитические точки и 480 чтений трассы перезапуска, '
+                     'а также доли по счётчикам прогонов, лаги и интервалы возраста и доступности.']
     if 'results' in summary:
         values = summary['results']
         russian += ['', '## Основные результаты', '', '| Показатель | Результат |', '| --- | ---: |',
@@ -254,6 +267,10 @@ def main(argv=None):
             summary['evidence_audit'] = run_evidence_audit(study)
             summary['stages'].append({'name': stage_name, 'status': 'PASS'})
             print('        PASS: every scheduled read, 48 table cells and 6 manuscript figures', flush=True)
+            stage_name = 'Independent verification of plotted scientific values'
+            summary['plot_audit'] = run_plot_audit()
+            summary['stages'].append({'name': stage_name, 'status': 'PASS'})
+            print('        PASS: analytical curves, run-count shares, intervals and restart trace', flush=True)
             if args.full:
                 stage_name = 'Regenerated outputs match supplied reference'
                 summary['regenerated_files_compared'] = compare_regenerated(ROOT / 'study', study)

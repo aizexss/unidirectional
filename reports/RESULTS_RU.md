@@ -14,6 +14,9 @@
 - PASS: Independent arrival-timeline and interval reconstruction
 - PASS: Agreement with manuscript results
 - PASS: Exact read timeline, manuscript tables and figure identities
+- PASS: Independent verification of plotted scientific values
+
+Графики: проверены 402 аналитические точки и 480 чтений трассы перезапуска, а также доли по счётчикам прогонов, лаги и интервалы возраста и доступности.
 
 ## Основные результаты
 

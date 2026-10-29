@@ -1,0 +1,4 @@
+# Optional figure rendering environment tested on Windows, Python 3.12.
+matplotlib==3.11.2
+numpy==2.5.4
+Pillow==13.0.0
