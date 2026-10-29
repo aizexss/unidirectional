@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "mode": "full",
-  "checked_at_utc": "2026-10-29T16:42:01.845939+00:00",
+  "mode": "verify-only",
+  "checked_at_utc": "2026-10-29T17:03:09.759717+00:00",
   "stages": [
     {
       "name": "File integrity",
@@ -20,10 +20,6 @@
       "status": "PASS"
     },
     {
-      "name": "Regenerate 960 mode runs and bootstrap intervals",
-      "status": "PASS"
-    },
-    {
       "name": "Independent validation of all 3,840,000 reads",
       "status": "PASS"
     },
@@ -38,16 +34,12 @@
     {
       "name": "Exact read timeline, manuscript tables and figure identities",
       "status": "PASS"
-    },
-    {
-      "name": "Regenerated outputs match supplied reference",
-      "status": "PASS"
     }
   ],
   "python_version": "3.12.14",
   "platform": "Windows-11-10.0.26300-SP0",
-  "manifest_files_verified": 67,
-  "preexisting_outputs_removed": 29,
+  "manifest_files_verified": 68,
+  "preexisting_outputs_removed": 0,
   "results": {
     "conditions": 12,
     "mode_runs": 960,
@@ -78,6 +70,5 @@
     "references_in_citation_order": 20,
     "author_identities": 3,
     "scope": "Declared synthetic event model; no physical-device validation"
-  },
-  "regenerated_files_compared": 29
+  }
 }

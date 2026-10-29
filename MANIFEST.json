@@ -16,8 +16,8 @@
   },
   {
     "path": "docs/JOURNAL_AUDIT.md",
-    "bytes": 3316,
-    "sha256": "b56bb34c3154d2ee17d91536a7c4a5fe1ca9ec2d15f4cfdbdc20abd6e89739ec"
+    "bytes": 3384,
+    "sha256": "b56bb5928185698f28c5f1212e60d0596b3d50b04f46eeae491be455d8f3375c"
   },
   {
     "path": "docs/REFERENCES.json",
@@ -61,13 +61,13 @@
   },
   {
     "path": "manuscript/Ibragimov_Aibar_Article_Revised.docx",
-    "bytes": 640358,
-    "sha256": "65cb221bd017811c248c479e3ef3c431d427f69a0e8e47da80fdfad0ffa8f4e0"
+    "bytes": 640463,
+    "sha256": "56e5c246d44ebdfc390224ea38d412fe8930eb6852a01e9faa8c03017639d681"
   },
   {
     "path": "manuscript/\u0418\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u0438_\u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c\u043d\u044b\u0439_\u0430\u0443\u0434\u0438\u0442.docx",
-    "bytes": 41129,
-    "sha256": "44e3cd16d8f65ed4fdb63d23edd12f7336c3d5582c31672ef145d670b4705242"
+    "bytes": 41166,
+    "sha256": "5367d71451b1cd8083538d55e257b8adacd467d3a196b263d3a5594b58d8a782"
   },
   {
     "path": "README.md",

@@ -2,7 +2,7 @@
 
 **Status: PASS**
 
-Mode: full
+Mode: verify-only
 
 ## Verification stages
 
@@ -10,12 +10,10 @@ Mode: full
 - PASS: Finite-state and schedule enumeration
 - PASS: Exact theory and partition checks
 - PASS: Equality-evidence graph checks
-- PASS: Regenerate 960 mode runs and bootstrap intervals
 - PASS: Independent validation of all 3,840,000 reads
 - PASS: Independent arrival-timeline and interval reconstruction
 - PASS: Agreement with manuscript results
 - PASS: Exact read timeline, manuscript tables and figure identities
-- PASS: Regenerated outputs match supplied reference
 
 ## Principal results
 

@@ -2,7 +2,7 @@
 
 Rules: [submission portal](https://www.journal.astanait.edu.kz/index.php/ojs/requirements) and the 2023 Word template linked by the [submission page](https://sj.astanait.edu.kz/submit-an-article/). The author selected the portal requirements when another official page gave a different abstract length.
 
-The manuscript has 13 pages (limit 15), A4 dimensions, Times New Roman body text at 12 points, single spacing, zero body paragraph spacing and margins of 2 / 2.5 / 3 / 1.5 cm (top / bottom / left / right). The abstract has 250 words and 1,772 characters. The bibliography has 20 numbered sources, all cited in first-mention order; citation groups contain no more than three sources. The keyword line has ten words. The six embedded images provide at least 300 effective pixels per printed inch on both axes.
+The manuscript has 14 pages (limit 15), A4 dimensions, Times New Roman body text, tables, captions, notes and references at 12 points, single spacing, zero body paragraph spacing and margins of 2 / 2.5 / 3 / 1.5 cm (top / bottom / left / right). The abstract has 250 words and 1,772 characters. The bibliography has 20 numbered sources, all cited in first-mention order; citation groups contain no more than three sources. The keyword line has ten words. The six embedded images provide at least 300 effective pixels per printed inch on both axes.
 
 Three author identities and their ORCID checksums are checked. Coauthor degrees and positions have not been inferred: the author explicitly requested only the supplied affiliations, emails and ORCIDs. Aibar's confirmed status is Master's student, without a degree.
 
