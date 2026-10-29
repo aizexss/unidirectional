@@ -1,0 +1,2 @@
+# Keep evidence and checksum files byte-identical on every checkout.
+* -text

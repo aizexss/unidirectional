@@ -1,0 +1,7 @@
+﻿case,history,x,y,x_origin,y_origin,reference,values_only,labels,grouping
+same_value_common_origin,000,0,0,1,1,coherent,ambiguous,coherent,ambiguous
+same_value_distinct_origins,000,0,0,1,2,mixed,ambiguous,mixed,ambiguous
+ABA_distinct_origins,010,0,0,3,1,mixed,ambiguous,mixed,ambiguous
+unequal_values_distinct_origins,010,0,1,1,2,mixed,mixed,mixed,mixed
+complete_old_snapshot,010,0,0,1,1,coherent,ambiguous,coherent,coherent
+one_field_missing,010,,1,0,2,unavailable,unavailable,unavailable,unavailable

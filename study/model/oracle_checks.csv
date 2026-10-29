@@ -1,0 +1,226 @@
+﻿x,y,labels,group,verdict,PC,PM,agrees_with_enumerated_explanations
+,,None,unknown,unavailable,,,1
+,,None,same,unavailable,,,1
+,,None,different,unavailable,,,1
+,,"('A', 'A')",unknown,unavailable,,,1
+,,"('A', 'A')",same,unavailable,,,1
+,,"('A', 'A')",different,unavailable,,,1
+,,"('A', 'B')",unknown,unavailable,,,1
+,,"('A', 'B')",same,unavailable,,,1
+,,"('A', 'B')",different,unavailable,,,1
+,-1,None,unknown,unavailable,,,1
+,-1,None,same,unavailable,,,1
+,-1,None,different,unavailable,,,1
+,-1,"('A', 'A')",unknown,unavailable,,,1
+,-1,"('A', 'A')",same,unavailable,,,1
+,-1,"('A', 'A')",different,unavailable,,,1
+,-1,"('A', 'B')",unknown,unavailable,,,1
+,-1,"('A', 'B')",same,unavailable,,,1
+,-1,"('A', 'B')",different,unavailable,,,1
+,0,None,unknown,unavailable,,,1
+,0,None,same,unavailable,,,1
+,0,None,different,unavailable,,,1
+,0,"('A', 'A')",unknown,unavailable,,,1
+,0,"('A', 'A')",same,unavailable,,,1
+,0,"('A', 'A')",different,unavailable,,,1
+,0,"('A', 'B')",unknown,unavailable,,,1
+,0,"('A', 'B')",same,unavailable,,,1
+,0,"('A', 'B')",different,unavailable,,,1
+,1,None,unknown,unavailable,,,1
+,1,None,same,unavailable,,,1
+,1,None,different,unavailable,,,1
+,1,"('A', 'A')",unknown,unavailable,,,1
+,1,"('A', 'A')",same,unavailable,,,1
+,1,"('A', 'A')",different,unavailable,,,1
+,1,"('A', 'B')",unknown,unavailable,,,1
+,1,"('A', 'B')",same,unavailable,,,1
+,1,"('A', 'B')",different,unavailable,,,1
+,2,None,unknown,unavailable,,,1
+,2,None,same,unavailable,,,1
+,2,None,different,unavailable,,,1
+,2,"('A', 'A')",unknown,unavailable,,,1
+,2,"('A', 'A')",same,unavailable,,,1
+,2,"('A', 'A')",different,unavailable,,,1
+,2,"('A', 'B')",unknown,unavailable,,,1
+,2,"('A', 'B')",same,unavailable,,,1
+,2,"('A', 'B')",different,unavailable,,,1
+-1,,None,unknown,unavailable,,,1
+-1,,None,same,unavailable,,,1
+-1,,None,different,unavailable,,,1
+-1,,"('A', 'A')",unknown,unavailable,,,1
+-1,,"('A', 'A')",same,unavailable,,,1
+-1,,"('A', 'A')",different,unavailable,,,1
+-1,,"('A', 'B')",unknown,unavailable,,,1
+-1,,"('A', 'B')",same,unavailable,,,1
+-1,,"('A', 'B')",different,unavailable,,,1
+-1,-1,None,unknown,out_of_model,False,False,1
+-1,-1,None,same,out_of_model,False,False,1
+-1,-1,None,different,out_of_model,False,False,1
+-1,-1,"('A', 'A')",unknown,out_of_model,False,False,1
+-1,-1,"('A', 'A')",same,out_of_model,False,False,1
+-1,-1,"('A', 'A')",different,out_of_model,False,False,1
+-1,-1,"('A', 'B')",unknown,out_of_model,False,False,1
+-1,-1,"('A', 'B')",same,out_of_model,False,False,1
+-1,-1,"('A', 'B')",different,out_of_model,False,False,1
+-1,0,None,unknown,out_of_model,False,False,1
+-1,0,None,same,out_of_model,False,False,1
+-1,0,None,different,out_of_model,False,False,1
+-1,0,"('A', 'A')",unknown,out_of_model,False,False,1
+-1,0,"('A', 'A')",same,out_of_model,False,False,1
+-1,0,"('A', 'A')",different,out_of_model,False,False,1
+-1,0,"('A', 'B')",unknown,out_of_model,False,False,1
+-1,0,"('A', 'B')",same,out_of_model,False,False,1
+-1,0,"('A', 'B')",different,out_of_model,False,False,1
+-1,1,None,unknown,out_of_model,False,False,1
+-1,1,None,same,out_of_model,False,False,1
+-1,1,None,different,out_of_model,False,False,1
+-1,1,"('A', 'A')",unknown,out_of_model,False,False,1
+-1,1,"('A', 'A')",same,out_of_model,False,False,1
+-1,1,"('A', 'A')",different,out_of_model,False,False,1
+-1,1,"('A', 'B')",unknown,out_of_model,False,False,1
+-1,1,"('A', 'B')",same,out_of_model,False,False,1
+-1,1,"('A', 'B')",different,out_of_model,False,False,1
+-1,2,None,unknown,out_of_model,False,False,1
+-1,2,None,same,out_of_model,False,False,1
+-1,2,None,different,out_of_model,False,False,1
+-1,2,"('A', 'A')",unknown,out_of_model,False,False,1
+-1,2,"('A', 'A')",same,out_of_model,False,False,1
+-1,2,"('A', 'A')",different,out_of_model,False,False,1
+-1,2,"('A', 'B')",unknown,out_of_model,False,False,1
+-1,2,"('A', 'B')",same,out_of_model,False,False,1
+-1,2,"('A', 'B')",different,out_of_model,False,False,1
+0,,None,unknown,unavailable,,,1
+0,,None,same,unavailable,,,1
+0,,None,different,unavailable,,,1
+0,,"('A', 'A')",unknown,unavailable,,,1
+0,,"('A', 'A')",same,unavailable,,,1
+0,,"('A', 'A')",different,unavailable,,,1
+0,,"('A', 'B')",unknown,unavailable,,,1
+0,,"('A', 'B')",same,unavailable,,,1
+0,,"('A', 'B')",different,unavailable,,,1
+0,-1,None,unknown,out_of_model,False,False,1
+0,-1,None,same,out_of_model,False,False,1
+0,-1,None,different,out_of_model,False,False,1
+0,-1,"('A', 'A')",unknown,out_of_model,False,False,1
+0,-1,"('A', 'A')",same,out_of_model,False,False,1
+0,-1,"('A', 'A')",different,out_of_model,False,False,1
+0,-1,"('A', 'B')",unknown,out_of_model,False,False,1
+0,-1,"('A', 'B')",same,out_of_model,False,False,1
+0,-1,"('A', 'B')",different,out_of_model,False,False,1
+0,0,None,unknown,ambiguous,True,True,1
+0,0,None,same,coherent,True,False,1
+0,0,None,different,mixed,False,True,1
+0,0,"('A', 'A')",unknown,coherent,True,False,1
+0,0,"('A', 'A')",same,coherent,True,False,1
+0,0,"('A', 'A')",different,out_of_model,False,False,1
+0,0,"('A', 'B')",unknown,mixed,False,True,1
+0,0,"('A', 'B')",same,out_of_model,False,False,1
+0,0,"('A', 'B')",different,mixed,False,True,1
+0,1,None,unknown,mixed,False,True,1
+0,1,None,same,out_of_model,False,False,1
+0,1,None,different,mixed,False,True,1
+0,1,"('A', 'A')",unknown,out_of_model,False,False,1
+0,1,"('A', 'A')",same,out_of_model,False,False,1
+0,1,"('A', 'A')",different,out_of_model,False,False,1
+0,1,"('A', 'B')",unknown,mixed,False,True,1
+0,1,"('A', 'B')",same,out_of_model,False,False,1
+0,1,"('A', 'B')",different,mixed,False,True,1
+0,2,None,unknown,out_of_model,False,False,1
+0,2,None,same,out_of_model,False,False,1
+0,2,None,different,out_of_model,False,False,1
+0,2,"('A', 'A')",unknown,out_of_model,False,False,1
+0,2,"('A', 'A')",same,out_of_model,False,False,1
+0,2,"('A', 'A')",different,out_of_model,False,False,1
+0,2,"('A', 'B')",unknown,out_of_model,False,False,1
+0,2,"('A', 'B')",same,out_of_model,False,False,1
+0,2,"('A', 'B')",different,out_of_model,False,False,1
+1,,None,unknown,unavailable,,,1
+1,,None,same,unavailable,,,1
+1,,None,different,unavailable,,,1
+1,,"('A', 'A')",unknown,unavailable,,,1
+1,,"('A', 'A')",same,unavailable,,,1
+1,,"('A', 'A')",different,unavailable,,,1
+1,,"('A', 'B')",unknown,unavailable,,,1
+1,,"('A', 'B')",same,unavailable,,,1
+1,,"('A', 'B')",different,unavailable,,,1
+1,-1,None,unknown,out_of_model,False,False,1
+1,-1,None,same,out_of_model,False,False,1
+1,-1,None,different,out_of_model,False,False,1
+1,-1,"('A', 'A')",unknown,out_of_model,False,False,1
+1,-1,"('A', 'A')",same,out_of_model,False,False,1
+1,-1,"('A', 'A')",different,out_of_model,False,False,1
+1,-1,"('A', 'B')",unknown,out_of_model,False,False,1
+1,-1,"('A', 'B')",same,out_of_model,False,False,1
+1,-1,"('A', 'B')",different,out_of_model,False,False,1
+1,0,None,unknown,mixed,False,True,1
+1,0,None,same,out_of_model,False,False,1
+1,0,None,different,mixed,False,True,1
+1,0,"('A', 'A')",unknown,out_of_model,False,False,1
+1,0,"('A', 'A')",same,out_of_model,False,False,1
+1,0,"('A', 'A')",different,out_of_model,False,False,1
+1,0,"('A', 'B')",unknown,mixed,False,True,1
+1,0,"('A', 'B')",same,out_of_model,False,False,1
+1,0,"('A', 'B')",different,mixed,False,True,1
+1,1,None,unknown,ambiguous,True,True,1
+1,1,None,same,coherent,True,False,1
+1,1,None,different,mixed,False,True,1
+1,1,"('A', 'A')",unknown,coherent,True,False,1
+1,1,"('A', 'A')",same,coherent,True,False,1
+1,1,"('A', 'A')",different,out_of_model,False,False,1
+1,1,"('A', 'B')",unknown,mixed,False,True,1
+1,1,"('A', 'B')",same,out_of_model,False,False,1
+1,1,"('A', 'B')",different,mixed,False,True,1
+1,2,None,unknown,out_of_model,False,False,1
+1,2,None,same,out_of_model,False,False,1
+1,2,None,different,out_of_model,False,False,1
+1,2,"('A', 'A')",unknown,out_of_model,False,False,1
+1,2,"('A', 'A')",same,out_of_model,False,False,1
+1,2,"('A', 'A')",different,out_of_model,False,False,1
+1,2,"('A', 'B')",unknown,out_of_model,False,False,1
+1,2,"('A', 'B')",same,out_of_model,False,False,1
+1,2,"('A', 'B')",different,out_of_model,False,False,1
+2,,None,unknown,unavailable,,,1
+2,,None,same,unavailable,,,1
+2,,None,different,unavailable,,,1
+2,,"('A', 'A')",unknown,unavailable,,,1
+2,,"('A', 'A')",same,unavailable,,,1
+2,,"('A', 'A')",different,unavailable,,,1
+2,,"('A', 'B')",unknown,unavailable,,,1
+2,,"('A', 'B')",same,unavailable,,,1
+2,,"('A', 'B')",different,unavailable,,,1
+2,-1,None,unknown,out_of_model,False,False,1
+2,-1,None,same,out_of_model,False,False,1
+2,-1,None,different,out_of_model,False,False,1
+2,-1,"('A', 'A')",unknown,out_of_model,False,False,1
+2,-1,"('A', 'A')",same,out_of_model,False,False,1
+2,-1,"('A', 'A')",different,out_of_model,False,False,1
+2,-1,"('A', 'B')",unknown,out_of_model,False,False,1
+2,-1,"('A', 'B')",same,out_of_model,False,False,1
+2,-1,"('A', 'B')",different,out_of_model,False,False,1
+2,0,None,unknown,out_of_model,False,False,1
+2,0,None,same,out_of_model,False,False,1
+2,0,None,different,out_of_model,False,False,1
+2,0,"('A', 'A')",unknown,out_of_model,False,False,1
+2,0,"('A', 'A')",same,out_of_model,False,False,1
+2,0,"('A', 'A')",different,out_of_model,False,False,1
+2,0,"('A', 'B')",unknown,out_of_model,False,False,1
+2,0,"('A', 'B')",same,out_of_model,False,False,1
+2,0,"('A', 'B')",different,out_of_model,False,False,1
+2,1,None,unknown,out_of_model,False,False,1
+2,1,None,same,out_of_model,False,False,1
+2,1,None,different,out_of_model,False,False,1
+2,1,"('A', 'A')",unknown,out_of_model,False,False,1
+2,1,"('A', 'A')",same,out_of_model,False,False,1
+2,1,"('A', 'A')",different,out_of_model,False,False,1
+2,1,"('A', 'B')",unknown,out_of_model,False,False,1
+2,1,"('A', 'B')",same,out_of_model,False,False,1
+2,1,"('A', 'B')",different,out_of_model,False,False,1
+2,2,None,unknown,out_of_model,False,False,1
+2,2,None,same,out_of_model,False,False,1
+2,2,None,different,out_of_model,False,False,1
+2,2,"('A', 'A')",unknown,out_of_model,False,False,1
+2,2,"('A', 'A')",same,out_of_model,False,False,1
+2,2,"('A', 'A')",different,out_of_model,False,False,1
+2,2,"('A', 'B')",unknown,out_of_model,False,False,1
+2,2,"('A', 'B')",same,out_of_model,False,False,1
+2,2,"('A', 'B')",different,out_of_model,False,False,1

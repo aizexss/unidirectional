@@ -1,0 +1,11 @@
+{
+  "graph_checks": 66064,
+  "graph_disagreements": 0,
+  "finite_count_parameter_cells": 16,
+  "finite_count_configurations": 57520,
+  "finite_count_disagreements": 0,
+  "uniform_collision_parameter_cells": 16,
+  "markov_exact_rational_checks": 65,
+  "all_checks_pass": true,
+  "scope": "Finite diagnostic checks and exact algebra, not independent hardware experiments."
+}

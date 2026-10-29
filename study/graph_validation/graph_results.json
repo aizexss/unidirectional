@@ -1,0 +1,45 @@
+{
+  "study": "Exact graph/partition enumeration; all field values equal; unrestricted origin identities",
+  "rows": [
+    {
+      "fields": 2,
+      "partitions": 2,
+      "equality_graphs": 2,
+      "connected_graphs": 1,
+      "ambiguous_graphs": 1,
+      "minimum_equality_edges_for_coherence": 1,
+      "partition_checks": 4
+    },
+    {
+      "fields": 3,
+      "partitions": 5,
+      "equality_graphs": 8,
+      "connected_graphs": 4,
+      "ambiguous_graphs": 4,
+      "minimum_equality_edges_for_coherence": 2,
+      "partition_checks": 40
+    },
+    {
+      "fields": 4,
+      "partitions": 15,
+      "equality_graphs": 64,
+      "connected_graphs": 38,
+      "ambiguous_graphs": 26,
+      "minimum_equality_edges_for_coherence": 3,
+      "partition_checks": 960
+    },
+    {
+      "fields": 5,
+      "partitions": 52,
+      "equality_graphs": 1024,
+      "connected_graphs": 728,
+      "ambiguous_graphs": 296,
+      "minimum_equality_edges_for_coherence": 4,
+      "partition_checks": 53248
+    }
+  ],
+  "equality_graphs_checked": 1098,
+  "partition_checks": 54252,
+  "assertions_passed": true,
+  "interpretation": "Logical evidence criterion, not a communication or cryptographic lower bound."
+}

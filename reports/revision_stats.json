@@ -1,0 +1,101 @@
+{
+  "source_sha256": "de343f9612e42314fe58bd6bb1a89d73554382b866778fe3fa511cb05bc148fc",
+  "final_sha256": "e4d7ac7ba8f6b58b0443296ec3cc68710c36c3d35d36bbf73a4081fbc51a9d6c",
+  "source_body_words_including_references": 4756,
+  "revised_body_words_including_references": 3889,
+  "abstract_words_before": 260,
+  "abstract_words_after": 150,
+  "tables": 8,
+  "figures": 6,
+  "equation_nodes_before": 10,
+  "equation_nodes_after": 10,
+  "removed_unused_foreign_links": [
+    "https://github.com/MuhammedZhumali/ContactAwareSSGS/releases/tag/aitu-v2-20261028"
+  ],
+  "changed_paragraph_indices": [
+    4,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    18,
+    21,
+    24,
+    27,
+    29,
+    30,
+    32,
+    34,
+    35,
+    36,
+    37,
+    41,
+    43,
+    50,
+    52,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    68,
+    69,
+    72,
+    73,
+    74,
+    78,
+    80,
+    81,
+    83,
+    85,
+    86,
+    89,
+    94,
+    97,
+    100,
+    102,
+    104,
+    105,
+    107,
+    109,
+    111
+  ],
+  "removed_paragraph_indices": [
+    25,
+    38,
+    90,
+    103
+  ],
+  "rounding_corrections": [
+    {
+      "table": 6,
+      "row": 6,
+      "column": 4,
+      "before": "95.49",
+      "after": "95.50"
+    },
+    {
+      "table": 6,
+      "row": 12,
+      "column": 4,
+      "before": "94.48",
+      "after": "94.49"
+    },
+    {
+      "table": 7,
+      "row": 2,
+      "column": 3,
+      "before": "30.89",
+      "after": "30.90"
+    }
+  ],
+  "changed_package_parts": [
+    "word/document.xml",
+    "word/_rels/document.xml.rels"
+  ]
+}

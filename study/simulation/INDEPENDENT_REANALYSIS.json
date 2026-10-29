@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "method": "Independent streamed reconstruction without importing simulator",
+  "readings_verified": 3840000,
+  "mode_runs_verified": 960,
+  "checked": [
+    "reference counts",
+    "availability reasons",
+    "values-only detection and hidden mixing",
+    "naive false coherence",
+    "V/I/G conclusive coverage",
+    "fresh/coherent state availability",
+    "conditional coherent mean and p95 age",
+    "per-run lag counts",
+    "Markov lag prediction via recurrence"
+  ]
+}

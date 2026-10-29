@@ -1,0 +1,5 @@
+control,publication,outcome,mixed,coherent,unavailable
+zero_delay_batch_before_read,R0,PASS,0,4000,0
+zero_delay_batch_before_read,R1,PASS,0,4000,0
+all_messages_lost,R0,PASS,0,0,4000
+all_messages_lost,R1,PASS,0,0,4000

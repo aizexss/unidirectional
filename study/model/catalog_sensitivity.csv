@@ -1,0 +1,5 @@
+﻿publication,public_catalog,actual_source_catalog,observation_profile,total,coherent,mixed,ambiguous,out_of_model,unavailable
+R0,G_diagonal,G_diagonal,V,128,0,24,48,0,56
+R0,G_full_binary,G_diagonal,V,128,0,0,72,0,56
+R1,G_diagonal,G_diagonal,V,32,0,0,24,0,8
+R1,G_full_binary,G_diagonal,V,32,0,0,24,0,8

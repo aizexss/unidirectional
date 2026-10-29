@@ -1,0 +1,9 @@
+﻿publication,step,message,x_origin,y_origin,reference
+R0,1,0,1,0,unavailable
+R0,2,1,1,1,coherent
+R0,3,2,2,1,mixed
+R0,4,3,2,2,coherent
+R0,5,0,1,2,mixed
+R1,1,0,1,1,coherent
+R1,2,1,2,2,coherent
+R1,3,0,1,1,coherent

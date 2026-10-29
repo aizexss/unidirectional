@@ -1,0 +1,2 @@
+﻿case,history,x_origin,y_origin,x,y,actual,supplied_group,verdict,actual_explanation_in_Omega,interpretation
+false_same_origin_grouping,000,1,2,0,0,mixed,same,coherent,0,False premise; excluded from correct-profile error denominator

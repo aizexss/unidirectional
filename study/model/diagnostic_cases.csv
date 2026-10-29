@@ -1,0 +1,6 @@
+﻿case,x,y,labels,group,verdict,expected
+outside_catalog,2,0,None,unknown,out_of_model,out_of_model
+equal_labels_incompatible_values,0,1,"('A', 'A')",unknown,out_of_model,out_of_model
+conflicting_evidence,0,0,"('A', 'B')",same,out_of_model,out_of_model
+known_different_equal_values,0,0,None,different,mixed,mixed
+missing_field_precedes_model_check,,2,None,unknown,unavailable,unavailable

@@ -1,0 +1,144 @@
+{
+  "study_type": "Executed synthetic discrete-event model; not a physical data-diode experiment",
+  "experiment_version": "article1-synthetic-v1",
+  "conditions": [
+    {
+      "id": "C01",
+      "alpha": 0.05,
+      "channel": "none",
+      "restart": "none",
+      "label": "a0.05_none"
+    },
+    {
+      "id": "C02",
+      "alpha": 0.05,
+      "channel": "iid05",
+      "restart": "none",
+      "label": "a0.05_iid05"
+    },
+    {
+      "id": "C03",
+      "alpha": 0.05,
+      "channel": "burst05",
+      "restart": "none",
+      "label": "a0.05_burst05"
+    },
+    {
+      "id": "C04",
+      "alpha": 0.5,
+      "channel": "none",
+      "restart": "none",
+      "label": "a0.5_none"
+    },
+    {
+      "id": "C05",
+      "alpha": 0.5,
+      "channel": "iid05",
+      "restart": "none",
+      "label": "a0.5_iid05"
+    },
+    {
+      "id": "C06",
+      "alpha": 0.5,
+      "channel": "burst05",
+      "restart": "none",
+      "label": "a0.5_burst05"
+    },
+    {
+      "id": "C07",
+      "alpha": 0.95,
+      "channel": "none",
+      "restart": "none",
+      "label": "a0.95_none"
+    },
+    {
+      "id": "C08",
+      "alpha": 0.95,
+      "channel": "iid05",
+      "restart": "none",
+      "label": "a0.95_iid05"
+    },
+    {
+      "id": "C09",
+      "alpha": 0.95,
+      "channel": "burst05",
+      "restart": "none",
+      "label": "a0.95_burst05"
+    },
+    {
+      "id": "C10",
+      "alpha": 0.5,
+      "channel": "iid05",
+      "restart": "clear",
+      "label": "a0.5_iid05_restart_clear"
+    },
+    {
+      "id": "C11",
+      "alpha": 0.5,
+      "channel": "iid05",
+      "restart": "preserve",
+      "label": "a0.5_iid05_restart_preserve"
+    },
+    {
+      "id": "C12",
+      "alpha": 0.5,
+      "channel": "burst05",
+      "restart": "clear",
+      "label": "a0.5_burst05_restart_clear"
+    }
+  ],
+  "independent_pairs_per_condition": 40,
+  "total_pairs": 480,
+  "total_mode_runs": 960,
+  "total_evaluation_readings": 3840000,
+  "generation_period_ms": 20,
+  "generation_count_per_run": 1200,
+  "total_duration_ms": 24000,
+  "warmup_ms": 4000,
+  "evaluation_duration_ms": 20000,
+  "read_period_ms": 5,
+  "slots_per_mode_run": 4000,
+  "delay_distribution": "discrete uniform integers0..40 ms per message",
+  "freshness_threshold_ms": 100,
+  "loss": {
+    "iid_probability": 0.05,
+    "burst_stationary_bad_probability": 0.05,
+    "burst_good_to_bad": 0.005263157894736844,
+    "burst_bad_to_good": 0.1,
+    "mean_bad_generations": 10.0,
+    "loss_applied_at": "source generation",
+    "burst_shared_by": "both R0 fields and R1 object for a generation"
+  },
+  "restart": {
+    "start_ms": 12000,
+    "duration_ms": 200,
+    "pending_policy": "Arrivals retain scheduled times; arrivals while receiver is down are dropped. Arrivals after ready are accepted.",
+    "observer": "Continues reading throughout; downtime observations are unavailable even if preserved memory exists."
+  },
+  "bootstrap": {
+    "replications": 2000,
+    "unit": "independent whole run or paired run difference",
+    "interval": "percentile2.5th..97.5th; deterministic keyed random stream",
+    "scope": "pointwise descriptive intervals; no multiplicity correction or confirmatory hypothesis tests"
+  },
+  "conclusive_monitor_errors": 0,
+  "r1_mixed_readings": 0,
+  "checks": {
+    "zero_delay_controls": 2,
+    "all_loss_controls": 2,
+    "restart_memory_controls": 2,
+    "invalid_metadata_controls": 2,
+    "false_grouping_control": 1,
+    "markov_recurrence_checks": 57,
+    "all_passed": true
+  },
+  "inference_limits": [
+    "No physical timing, link calibration, bandwidth-normalized comparison or industrial failure estimate.",
+    "Source values, delivery and loss streams are independent by construction.",
+    "V/I/G use truthful metadata in main runs; zero errors validate model implementation under those premises.",
+    "Age is reported only for available coherent state; unavailable and mixed states have no state-age value.",
+    "R0 and R1 have different message units/counts; comparison describes publication semantics, not transport efficiency.",
+    "Reading slots are dependent. Independent repetition unit is a seeded paired run.",
+    "The receiver restarts; source epochs do not restart. No attacker, cryptographic primitive or source capture fault is simulated."
+  ]
+}

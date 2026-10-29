@@ -1,0 +1,5 @@
+fields,partitions,equality_graphs,connected_graphs,ambiguous_graphs,minimum_equality_edges_for_coherence,partition_checks
+2,2,2,1,1,1,4
+3,5,8,4,4,2,40
+4,15,64,38,26,3,960
+5,52,1024,728,296,4,53248

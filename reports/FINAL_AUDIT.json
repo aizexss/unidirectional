@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-10-29T14:58:40.070875+00:00",
+  "article_pages": 13,
+  "page_limit": 15,
+  "change_report_pages": 2,
+  "regression_tests_passed": 8,
+  "full_reproduction": "PASS",
+  "reference_outputs_compared": 29,
+  "final_verify_only": "PASS",
+  "independently_reconstructed_reads": 3840000,
+  "mode_runs": 960,
+  "numeric_table_cells_checked": 48,
+  "rounding_corrections": 3,
+  "original_computational_files_unchanged": 47,
+  "visual_review": "All final pages reviewed; pages 1–6 pixel-identical to earlier reviewed pages; final pages 7–13 reinspected",
+  "article_sha256": "e4d7ac7ba8f6b58b0443296ec3cc68710c36c3d35d36bbf73a4081fbc51a9d6c",
+  "change_report_sha256": "2cbb9771370cd7f1077dd1f6251f632f0a2dc23a70f316afb52b696f568a1882",
+  "repository_url": "https://github.com/aizexss/unidirectional",
+  "repository_private": true,
+  "version_tag": "article1-revision-20261029",
+  "review_axes": [
+    "scientific correctness",
+    "numeric agreement",
+    "code correctness and failure output",
+    "readability",
+    "file integrity and secrets",
+    "runtime and layout"
+  ],
+  "new_findings_in_final_pass": [],
+  "scope_limits": [
+    "Synthetic study; no physical-device validation",
+    "Private repository requires reviewer access"
+  ]
+}

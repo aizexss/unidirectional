@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "mode": "verify-only",
+  "checked_at_utc": "2026-10-29T14:56:14.315062+00:00",
+  "stages": [
+    {
+      "name": "File integrity",
+      "status": "PASS"
+    },
+    {
+      "name": "Finite-state and schedule enumeration",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact theory and partition checks",
+      "status": "PASS"
+    },
+    {
+      "name": "Equality-evidence graph checks",
+      "status": "PASS"
+    },
+    {
+      "name": "Independent validation of all 3,840,000 reads",
+      "status": "PASS"
+    },
+    {
+      "name": "Independent arrival-timeline and interval reconstruction",
+      "status": "PASS"
+    },
+    {
+      "name": "Agreement with manuscript results",
+      "status": "PASS"
+    }
+  ],
+  "manifest_files_verified": 55,
+  "results": {
+    "conditions": 12,
+    "mode_runs": 960,
+    "scheduled_reads": 3840000,
+    "replications_per_condition": 40,
+    "slots_per_mode_run": 4000,
+    "C05_R0_actual_mixed_percent": 62.144375,
+    "C05_R0_complete_percent": 100.0,
+    "R1_actual_mixed_reads_all_conditions": 0,
+    "no_loss_values_detection_percent_given_mixed": {
+      "C01": 5.878050741830519,
+      "C04": 49.839372933218506,
+      "C07": 79.12914047018523
+    },
+    "corrected_table_percentages": {
+      "C06_R1_fresh_coherent_percent": "95.50",
+      "C12_R1_fresh_coherent_percent": "94.49",
+      "C05_R0_V_conclusive_percent": "30.90"
+    }
+  }
+}

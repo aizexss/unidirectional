@@ -1,0 +1,4 @@
+fields,checked,disagreements,difference_edges_tested
+2,16,0,"every subset, including conflicts with equality edges"
+3,512,0,"every subset, including conflicts with equality edges"
+4,65536,0,"every subset, including conflicts with equality edges"
