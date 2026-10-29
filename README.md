@@ -6,7 +6,7 @@ This public repository contains the source code, synthetic data and manuscript. 
 
 ## Run the study
 
-Use Python 3.10 or later. The computations and runner need only the standard library; no device, API key, online service or extra package is required.
+The verified environment is Python 3.12.14 on Windows. Use that interpreter to reproduce the frozen numerical files. The runner supports Python 3.10 syntax, but other interpreter versions have not been validated for identical floating-point output. The computations and runner need only the standard library; no device, API key, online service or extra package is required.
 
 ```sh
 python reproduce.py --verify-only
