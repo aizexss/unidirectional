@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "mode": "verify-only",
-  "checked_at_utc": "2026-10-29T17:03:09.759717+00:00",
+  "checked_at_utc": "2026-10-29T17:29:29.848040+00:00",
   "stages": [
     {
       "name": "File integrity",
@@ -38,7 +38,7 @@
   ],
   "python_version": "3.12.14",
   "platform": "Windows-11-10.0.26300-SP0",
-  "manifest_files_verified": 68,
+  "manifest_files_verified": 66,
   "preexisting_outputs_removed": 0,
   "results": {
     "conditions": 12,

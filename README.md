@@ -2,7 +2,7 @@
 
 Companion code and synthetic data for **Verifying State Snapshot Coherence in Unidirectional Industrial Telemetry**, by Aibar Ibragimov, Leila Rzayeva and Laura Aldasheva.
 
-This is a private repository. Reviewers need repository access before they can follow the manuscript's link. The verified revision is tagged `article1-verified-20261029`; the earlier `article1-revision-20261029` remains unchanged.
+This public repository contains the source code, synthetic data and manuscript. The publication version is tagged `article1-public-20261029`. No account or access request is needed to download the materials.
 
 ## Run the study
 
@@ -39,7 +39,7 @@ All timings, losses and source values are synthetic. Shared random inputs couple
 
 | Location | Content |
 | --- | --- |
-| `manuscript/` | Revised article and Russian change comparison |
+| `manuscript/` | Research article and its six figure images |
 | `study/model/` | Exact finite model, schedule enumeration and negative controls |
 | `study/theory/` | Independent finite-count, partition and Markov checks |
 | `study/graph_checks.py`, `study/graph_validation/` | Equality-evidence graph enumeration |
@@ -59,4 +59,4 @@ The runner does not regenerate the Word layout or figure exports. The industrial
 
 Run the runner's regression tests with `python -m unittest discover -s tests -v`.
 
-The deeper audit checks every `(condition, seed, mode, read time, online status, x origin, y origin)` tuple against independently sorted arrivals. It rejects missing/extra reads, timestamp duplicates and wrong origins even if aggregate percentages would coincide. It also checks the 250–280-word abstract, 20 references in first-citation order and the three author identities and ORCID checksums. `docs/TRACEABILITY.md` maps article claims to the code and evidence. `reports/FINAL_AUDIT.json` records the frozen revision audit; `reports/verification_summary.json` records the latest local run.
+The deeper audit checks every `(condition, seed, mode, read time, online status, x origin, y origin)` tuple against independently sorted arrivals. It rejects missing/extra reads, timestamp duplicates and wrong origins even if aggregate percentages would coincide. It also checks the 250–280-word abstract, 20 references in first-citation order and the three author identities and ORCID checksums. `docs/TRACEABILITY.md` maps article claims to the code and evidence. `reports/verification_summary.json` records the latest verification run.

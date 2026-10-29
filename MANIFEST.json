@@ -15,14 +15,9 @@
     "sha256": "f6df90abddd91b9c4655428624ba86b66758f0eab01c4028fd260ce73b23cf24"
   },
   {
-    "path": "docs/JOURNAL_AUDIT.md",
-    "bytes": 3384,
-    "sha256": "b56bb5928185698f28c5f1212e60d0596b3d50b04f46eeae491be455d8f3375c"
-  },
-  {
     "path": "docs/REFERENCES.json",
-    "bytes": 5281,
-    "sha256": "2d892d81f7b81f0b8e7ef13f78849a6434025286a9db83bd29aebf15188c5d6a"
+    "bytes": 5277,
+    "sha256": "c2452256aeaf2ee700b94509738a284387be37cedf3f5e9c35ad024293cd66d0"
   },
   {
     "path": "docs/TRACEABILITY.md",
@@ -61,23 +56,18 @@
   },
   {
     "path": "manuscript/Ibragimov_Aibar_Article_Revised.docx",
-    "bytes": 640463,
-    "sha256": "56e5c246d44ebdfc390224ea38d412fe8930eb6852a01e9faa8c03017639d681"
-  },
-  {
-    "path": "manuscript/\u0418\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f_\u0438_\u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c\u043d\u044b\u0439_\u0430\u0443\u0434\u0438\u0442.docx",
-    "bytes": 41166,
-    "sha256": "5367d71451b1cd8083538d55e257b8adacd467d3a196b263d3a5594b58d8a782"
+    "bytes": 640423,
+    "sha256": "c05ed0fa2c88e9686424da954bedc22f9f53ae79deaa6dfe2f13fed74eb6bfa8"
   },
   {
     "path": "README.md",
-    "bytes": 5137,
-    "sha256": "62604dc0b8833b885cfa85fae7e6c7bf1f2b8b2ffc1edc94f76d3dae7d18a53f"
+    "bytes": 5056,
+    "sha256": "f25f831b22115d7eb1249277bdb1509cf3a263658264ecfbd8dc980e642ca965"
   },
   {
     "path": "README_RU.md",
-    "bytes": 4860,
-    "sha256": "86dedd1cbc35fd09721ade8d7bd79bd833bcae03d6e08f6e3c59908979d24837"
+    "bytes": 4806,
+    "sha256": "530535822339665dc695a2cd792691d4a17d85c8c2b6de0fdd63235eeb4fc172"
   },
   {
     "path": "reproduce.py",
