@@ -170,7 +170,6 @@ def audit_journal_text(paragraphs):
     identities = (
         ('Aibar Ibragimov', 'life33890@gmail.com', '0009-0002-7454-2382'),
         ('Leila Rzayeva', 'l.rzayeva@astanait.edu.kz', '0000-0002-3382-4685'),
-        ('Laura Aldasheva', 'laura.aldasheva@astanait.edu.kz', '0000-0001-6815-1989'),
     )
     front = '\n'.join(paragraphs[:paragraphs.index('Introduction')])
     for name, email, orcid in identities:

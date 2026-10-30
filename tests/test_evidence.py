@@ -47,7 +47,7 @@ class JournalContract(unittest.TestCase):
 
     def test_current_author_orcids_have_valid_checksums(self):
         result = audit.audit_journal_text(self.paragraphs)
-        self.assertEqual(result['author_identities'], 3)
+        self.assertEqual(result['author_identities'], 2)
         self.assertEqual(result['references_in_citation_order'], 20)
         self.assertFalse(audit.orcid_valid('0000-0002-3382-4684'))
         self.assertFalse(audit.orcid_valid('0000-0002-3382-468'))

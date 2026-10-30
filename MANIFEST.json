@@ -11,8 +11,8 @@
   },
   {
     "path": "audit_evidence.py",
-    "bytes": 12994,
-    "sha256": "52afee060d2442dec919b15422d984b6cac7a4cecdee59dc7d92f0972be84662"
+    "bytes": 12907,
+    "sha256": "8287c5e57a5627d868a5376225ae992f87eef0b0e5f11042b0a38373bd1739a1"
   },
   {
     "path": "audit_plots.py",
@@ -21,13 +21,13 @@
   },
   {
     "path": "docs/BIBLIOGRAPHY_AUDIT.json",
-    "bytes": 16311,
-    "sha256": "cff9d565b636d7a5fcec8b94e05f1b17f447f3d2047db70e3ebba6c13fe539ba"
+    "bytes": 16300,
+    "sha256": "33c75bbdb36d95cac69a9901836a416679a242ef9a8aa066374ecd17ff69a842"
   },
   {
     "path": "docs/REFERENCES.json",
     "bytes": 5310,
-    "sha256": "7e894ca266db38b26ee1946469886a12a81f798880f91742a2c734ffde966222"
+    "sha256": "690538d268a4001a7b5c06a7694f87270aef64df03aa9b6771045ea6f92f2e94"
   },
   {
     "path": "docs/TRACEABILITY.md",
@@ -71,8 +71,8 @@
   },
   {
     "path": "manuscript/Ibragimov_Aibar_Article_Revised.docx",
-    "bytes": 876302,
-    "sha256": "3257182aa11286c8395d004cf5a9766add2af0e66de144494aa12c696060224e"
+    "bytes": 876499,
+    "sha256": "9d22360d65c47f0198c81f569adc596cf02c630cdd085e21476b41592498fed4"
   },
   {
     "path": "plot_figures.py",
@@ -81,13 +81,13 @@
   },
   {
     "path": "README.md",
-    "bytes": 6627,
-    "sha256": "9214dd2a76c4dfb637c82fa935ed2f9ed4fc74087478896f7f780c9545a2966e"
+    "bytes": 6610,
+    "sha256": "2b121933d39da7ce656939c743a7d9d98ff15a1cf38dcc9b4d1deabc65a1c90b"
   },
   {
     "path": "README_RU.md",
-    "bytes": 6919,
-    "sha256": "91e81c9afcd587ee6e6f3bd4ab544964f06a99b0aa878df2edf92bec3fdc11d9"
+    "bytes": 6902,
+    "sha256": "4a686e1a855d8bb34844c9be264d5a4c28a1c0cc2f3d701809280f7c82b4fb2d"
   },
   {
     "path": "reproduce.py",
@@ -342,7 +342,7 @@
   {
     "path": "tests/test_evidence.py",
     "bytes": 5031,
-    "sha256": "2504e6a78c8f97fbf7df16034bfb91dca2debc832ef4edbe34f89e8ca2ace3a7"
+    "sha256": "4ecaab3775d4bf97b94bdfd6d998b545ffe92b51104167dfa132016b0b68dbe0"
   },
   {
     "path": "tests/test_model_contract.py",
