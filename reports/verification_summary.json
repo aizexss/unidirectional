@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "mode": "verify-only",
-  "checked_at_utc": "2026-10-29T21:03:14.162038+00:00",
+  "checked_at_utc": "2026-10-30T04:17:00.337678+00:00",
   "stages": [
     {
       "name": "File integrity",
@@ -42,7 +42,7 @@
   ],
   "python_version": "3.12.14",
   "platform": "Windows-11-10.0.26300-SP0",
-  "manifest_files_verified": 72,
+  "manifest_files_verified": 73,
   "preexisting_outputs_removed": 0,
   "results": {
     "conditions": 12,
@@ -68,12 +68,13 @@
     "status": "PASS",
     "exact_timeline_rows": 3840000,
     "simulation_table_cells": 48,
+    "manuscript_tables": 9,
     "exact_manuscript_figures": 6,
     "embedded_mathtype_equations": 10,
     "abstract_words": 250,
-    "abstract_characters": 1772,
+    "abstract_characters": 1817,
     "references_in_citation_order": 20,
-    "author_identities": 3,
+    "author_identities": 2,
     "scope": "Declared synthetic event model; no physical-device validation"
   },
   "plot_audit": {
