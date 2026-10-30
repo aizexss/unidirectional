@@ -11,8 +11,8 @@
   },
   {
     "path": "audit_evidence.py",
-    "bytes": 11632,
-    "sha256": "7a6bc976cf3adda422f533fcf7e7f468654f248db715e4ab36855589a9a3d157"
+    "bytes": 12994,
+    "sha256": "52afee060d2442dec919b15422d984b6cac7a4cecdee59dc7d92f0972be84662"
   },
   {
     "path": "audit_plots.py",
@@ -20,14 +20,19 @@
     "sha256": "652dd82a43670d3bd540656a75c6c61aa31eb50c1c07b30bdff29cecde1570b8"
   },
   {
+    "path": "docs/BIBLIOGRAPHY_AUDIT.json",
+    "bytes": 16311,
+    "sha256": "cff9d565b636d7a5fcec8b94e05f1b17f447f3d2047db70e3ebba6c13fe539ba"
+  },
+  {
     "path": "docs/REFERENCES.json",
-    "bytes": 5291,
-    "sha256": "15e074cb022c955ccbffb6b393033949fc3cd44b0798b7e75997919422e8d2ce"
+    "bytes": 5310,
+    "sha256": "7e894ca266db38b26ee1946469886a12a81f798880f91742a2c734ffde966222"
   },
   {
     "path": "docs/TRACEABILITY.md",
     "bytes": 3405,
-    "sha256": "e56c8b73a9b810bf4bed3ecf9be5dd87e4abc78fd359b918fd479f66da0d7403"
+    "sha256": "4b56d79dedee2020cd0cb3c3c9b30b3f6a6708f2d8788f65ee76cc0edd655195"
   },
   {
     "path": "manuscript/figures/figure-1.png",
@@ -51,8 +56,8 @@
   },
   {
     "path": "manuscript/figures/figure-5.png",
-    "bytes": 128971,
-    "sha256": "8358074e966cbd340081500b765a40bd01b96ce96cad1de4bc8678336973dc36"
+    "bytes": 152657,
+    "sha256": "57d8526de44abe9035aa5287c0731313b72f639a149b0f88eec37209ad0bbdcd"
   },
   {
     "path": "manuscript/figures/figure-6.png",
@@ -62,27 +67,27 @@
   {
     "path": "manuscript/figures/plot_evidence.json",
     "bytes": 53179,
-    "sha256": "657fdbfe7ff03c82b82e14f6551f24c31466353189ff7952e80cd113eead2866"
+    "sha256": "dcd906a7369a6aac4ad2c458cbf80711f990e97b14773f24513b80013c1bb7f2"
   },
   {
     "path": "manuscript/Ibragimov_Aibar_Article_Revised.docx",
-    "bytes": 852088,
-    "sha256": "c4c7246451cbde382a56c2b9eeecb2729d3f2ceda96fbe0d546f96de008264f4"
+    "bytes": 876302,
+    "sha256": "3257182aa11286c8395d004cf5a9766add2af0e66de144494aa12c696060224e"
   },
   {
     "path": "plot_figures.py",
-    "bytes": 15139,
-    "sha256": "aa4daace230793268b3912022757689cd39bbf2e020a48670d900784e7961bc8"
+    "bytes": 15282,
+    "sha256": "6722b268133f7d4adbb792d3a2d65e0b1ece6859bbb29948951e71e5ef7e5bcb"
   },
   {
     "path": "README.md",
-    "bytes": 6502,
-    "sha256": "389fbdb65e8b1c6dda3dc3c1bfb158c9958455b63c4e36230193400dc6bcc2ad"
+    "bytes": 6627,
+    "sha256": "9214dd2a76c4dfb637c82fa935ed2f9ed4fc74087478896f7f780c9545a2966e"
   },
   {
     "path": "README_RU.md",
-    "bytes": 6716,
-    "sha256": "0606ae4b805a8d06d2e6d80ab8c91c40c70fc8a768d8a44c83b6e5e7dad36c93"
+    "bytes": 6919,
+    "sha256": "91e81c9afcd587ee6e6f3bd4ab544964f06a99b0aa878df2edf92bec3fdc11d9"
   },
   {
     "path": "reproduce.py",
@@ -336,8 +341,8 @@
   },
   {
     "path": "tests/test_evidence.py",
-    "bytes": 3429,
-    "sha256": "44705616ce10248f672d4fb0e0ea113484750cf5060b1ae50b617568f6938f4e"
+    "bytes": 5031,
+    "sha256": "2504e6a78c8f97fbf7df16034bfb91dca2debc832ef4edbe34f89e8ca2ace3a7"
   },
   {
     "path": "tests/test_model_contract.py",

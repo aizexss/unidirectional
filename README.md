@@ -2,7 +2,7 @@
 
 Companion code and synthetic data for **Verifying State Snapshot Coherence in Unidirectional Industrial Telemetry**, by Aibar Ibragimov, Leila Rzayeva and Laura Aldasheva.
 
-This public repository contains the source code, synthetic data and manuscript. The publication version is tagged `article1-submission-20261030-r2`. No account or access request is needed to download the materials.
+This public repository contains the source code, synthetic data and manuscript. The publication version is tagged `article1-submission-20261030-r3`. No account or access request is needed to download the materials.
 
 ## Run the study
 
@@ -74,3 +74,5 @@ The article uses Times New Roman. If that font is unavailable, explicitly select
 Run the runner's regression tests with `python -m unittest discover -s tests -v`.
 
 The deeper audit checks every `(condition, seed, mode, read time, online status, x origin, y origin)` tuple against independently sorted arrivals. It rejects missing/extra reads, timestamp duplicates and wrong origins even if aggregate percentages would coincide. It also checks the 250–280-word abstract, 20 references in first-citation order and the three author identities and ORCID checksums. `docs/TRACEABILITY.md` maps article claims to the code and evidence. `reports/verification_summary.json` records the latest verification run.
+
+Source coverage, publication dates and the limits of the bibliography check are recorded in `docs/BIBLIOGRAPHY_AUDIT.json`.

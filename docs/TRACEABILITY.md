@@ -9,7 +9,7 @@ The paper describes a synthetic computational experiment. The code does not cont
 | Whole-object R1 preserves one capture | `simulate` installs `ox` and `oy` together | Exact sorted-arrival reconstruction for every read; zero-delay, loss and reset controls |
 | 12 conditions, 40 seed indices, 960 mode runs | `conditions`, `main`, keyed RNG streams | Run identities, counters and independent source reconstruction |
 | Loss, delayed arrival, reset/ready/read ordering | `simulate` event heap | `audit_evidence.py` reconstructs sorted arrivals and checks all 3,840,000 read tuples directly |
-| Mixing and coverage in Tables 6 and 7 | `run_metrics.csv` | Exact integer-count ratios checked against 48 Word table cells |
+| Mixing and coverage in Tables 7 and 8 | `run_metrics.csv` | Exact integer-count ratios checked against 48 Word table cells |
 | Bootstrap summaries and paired contrasts | `aggregate`, `aggregate_lags` | Existing independent audit checks 372 means, 132 selected intervals and 60 paired intervals |
 | Figures 1 through 6 | `plot_figures.py` reads analytical formulas and frozen simulation CSVs | `audit_plots.py` independently checks plotted values; exact PNG equality with Word is also checked |
 | Full numerical reproduction | `reproduce.py --full` | 29 prior numeric files removed before regeneration; new CSV/JSON and decompressed log compared with frozen reference |

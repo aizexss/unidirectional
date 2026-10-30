@@ -1,0 +1,395 @@
+{
+  "checked_on": "2026-10-30",
+  "status": "QUALIFIED_FINDINGS",
+  "scope": "Bibliographic quotas and metadata; exact database article-record certification is not claimed.",
+  "requirements_source": "https://www.journal.astanait.edu.kz/index.php/ojs/requirements",
+  "requirements": {
+    "minimum_references": 20,
+    "minimum_scopus_wos_share_percent": 30,
+    "minimum_foreign_sources_percent": 60,
+    "maximum_self_citation_percent": 20,
+    "fundamental_max_years": 10,
+    "applied_max_years": 5
+  },
+  "reference_count": 20,
+  "indexing_interpretation": {
+    "note": "AITU wording does not clearly distinguish article records from publication venues. This audit establishes journal-level coverage, not a certified count of individual Scopus and WoS records. Citations to a work are a further, separate metric and have not been counted.",
+    "verified_venue_references": [
+      2,
+      7,
+      13,
+      14,
+      17,
+      18
+    ],
+    "verified_venue_reference_count": 6,
+    "denominator": 20,
+    "verified_venue_share_percent": 30,
+    "venue_threshold_status": "SUPPORTED_AT_JOURNAL_LEVEL",
+    "individual_article_record_threshold_status": "NOT_FULLY_VERIFIED",
+    "records_checked_in_both_databases": 0
+  },
+  "verified_journal_coverage": [
+    {
+      "reference": 2,
+      "journal": "Sensors",
+      "issn": "1424-8220",
+      "scopus": true,
+      "wos_collection": "SCIE",
+      "evidence_level": "publisher_explicit_indexing_list",
+      "sources": [
+        "https://www.mdpi.com/journal/sensors/indexing"
+      ],
+      "article_doi": "10.3390/s24206537",
+      "article_record_status": "Not individually queried in both proprietary databases"
+    },
+    {
+      "reference": 7,
+      "journal": "Software and Systems Modeling",
+      "issn": "1619-1366 / 1619-1374",
+      "scopus": true,
+      "wos_collection": "SCIE",
+      "evidence_level": "publisher_explicit_indexing_list",
+      "sources": [
+        "https://link.springer.com/journal/10270"
+      ],
+      "article_doi": "10.1007/s10270-026-01394-6",
+      "publication_date": "2026-07-14",
+      "article_record_status": "Version of record confirmed on publisher page; individual Scopus/WoS records not certified",
+      "publication_source": "https://link.springer.com/article/10.1007/s10270-026-01394-6"
+    },
+    {
+      "reference": 13,
+      "journal": "IEEE Journal on Selected Areas in Communications",
+      "scopus": true,
+      "wos_collection": "JCR journal; SCIE venue",
+      "evidence_level": "publisher_identifies_the_journal_in_current_Scopus_CiteScore_and_Clarivate_JCR_rankings",
+      "sources": [
+        "https://innovate.ieee.org/ieee-journals-continue-to-excel-in-citation-rankings/",
+        "https://journals.ieeeauthorcenter.ieee.org/when-your-article-is-published/abstracting-indexing-ai-databases/"
+      ],
+      "article_doi": "10.1109/JSAC.2021.3065072",
+      "article_record_status": "Not individually queried in both proprietary databases"
+    },
+    {
+      "reference": 14,
+      "journal": "Electronics",
+      "issn": "2079-9292",
+      "scopus": true,
+      "wos_collection": "SCIE",
+      "evidence_level": "publisher_explicit_indexing_list",
+      "sources": [
+        "https://www.mdpi.com/journal/electronics/indexing",
+        "https://www.mdpi.com/journal/electronics/history"
+      ],
+      "article_doi": "10.3390/electronics13061104",
+      "article_record_status": "Not individually queried in both proprietary databases"
+    },
+    {
+      "reference": 17,
+      "journal": "Journal of Computational and Graphical Statistics",
+      "issn": "1061-8600 / 1537-2715",
+      "scopus": true,
+      "wos_collection": "SCIE",
+      "evidence_level": "publisher_explicit_indexing_list",
+      "sources": [
+        "https://www.tandfonline.com/action/journalInformation?journalCode=ucgs20&show=editorialBoard",
+        "https://www.tandfonline.com/journals/ucgs20/about-this-journal"
+      ],
+      "article_doi": "10.1080/10618600.2020.1714633",
+      "article_record_status": "Not individually queried in both proprietary databases"
+    },
+    {
+      "reference": 18,
+      "journal": "Journal of Simulation",
+      "issn": "1747-7778 / 1747-7786",
+      "scopus": true,
+      "wos_collection": "SCIE",
+      "evidence_level": "publisher_explicit_indexing_list",
+      "sources": [
+        "https://www.tandfonline.com/action/journalInformation?journalCode=tjsm20&show=societyInformation"
+      ],
+      "article_doi": "10.1080/17477778.2018.1442155",
+      "article_record_status": "Not individually queried in both proprietary databases"
+    }
+  ],
+  "not_counted_in_primary_minimum": [
+    {
+      "reference": 5,
+      "journal": "ACM Transactions on Computational Logic",
+      "reason": "Publisher DL and official Scopus source page returned 403, Clarivate result required JavaScript. Secondary listings consistently report both indexes, but were not substituted for primary proof.",
+      "official_lookup_links": [
+        "https://www.scopus.com/sourceid/23051",
+        "https://mjl.clarivate.com/search-results?issn=15293785",
+        "https://dl.acm.org/journal/tocl/about"
+      ]
+    },
+    {
+      "reference": 8,
+      "journal": "Information and Software Technology",
+      "reason": "Published replacement is appropriate, but current publisher indexing pages returned 403. Institutional catalogues support Scopus/SCIE coverage; not counted in strict publisher-only minimum.",
+      "official_lookup_links": [
+        "https://www.sciencedirect.com/journal/information-and-software-technology/about/insights"
+      ],
+      "supporting_institutional_not_publisher_evidence": [
+        "https://scholar.pusan.ac.kr/journals/10197/",
+        "https://library.wur.nl/WebQuery/utbrowser/1663"
+      ]
+    }
+  ],
+  "foreign_sources": {
+    "status": "SUPPORTED_UNDER_STATED_DEFINITION",
+    "definition": "A source issued by an organisation/publisher outside Kazakhstan; this is not a claim about every author's citizenship. AITU does not specify its operational definition.",
+    "count": 19,
+    "denominator": 20,
+    "share_percent": 95,
+    "excluded_reference": 20,
+    "note": "The nineteen external sources are international standards, books, papers and documentation issued outside Kazakhstan. Only twelve are required at a 20-reference denominator."
+  },
+  "self_citations": {
+    "status": "PASS",
+    "count": 1,
+    "denominator": 20,
+    "share_percent": 5,
+    "references": [
+      20
+    ],
+    "method": "Compare bibliography author names with Ibragimov, Rzayeva and Aldasheva; no other matching author was found."
+  },
+  "recency": {
+    "status": "SUPPORTED_UNDER_STATED_CLASSIFICATION_WITH_VERSIONED_DOCUMENTATION",
+    "method": "Calendar-year screening. Methodological/formal/statistical works are classified as foundational and engineering applications as applied. The journal does not define this boundary; it is an explicit interpretation, not an official classification.",
+    "dated_sources": [
+      {
+        "reference": 1,
+        "year": 2023,
+        "classification": "applied",
+        "reason": "OT operational guidance",
+        "calendar_year_age": 3,
+        "maximum_years_used": 5,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 2,
+        "year": 2024,
+        "classification": "applied",
+        "reason": "Unidirectional syslog implementation",
+        "calendar_year_age": 2,
+        "maximum_years_used": 5,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 3,
+        "year": 2020,
+        "classification": "foundational",
+        "reason": "General concurrent-programming foundations",
+        "calendar_year_age": 6,
+        "maximum_years_used": 10,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 4,
+        "year": 2023,
+        "classification": "foundational",
+        "reason": "Distributed-systems foundations",
+        "calendar_year_age": 3,
+        "maximum_years_used": 10,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 5,
+        "year": 2020,
+        "classification": "foundational",
+        "reason": "Formal runtime-verification semantics and algorithms",
+        "calendar_year_age": 6,
+        "maximum_years_used": 10,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 6,
+        "year": 2018,
+        "classification": "foundational",
+        "reason": "Introductory methodological foundations of runtime verification",
+        "calendar_year_age": 8,
+        "maximum_years_used": 10,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 7,
+        "year": 2026,
+        "classification": "foundational",
+        "reason": "Assumption-based formal monitoring method",
+        "calendar_year_age": 0,
+        "maximum_years_used": 10,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 8,
+        "year": 2026,
+        "classification": "foundational",
+        "reason": "Published 2026 extended symbolic-monitoring paper; replaces the cited preprint",
+        "calendar_year_age": 0,
+        "maximum_years_used": 10,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 9,
+        "year": 2025,
+        "classification": "applied",
+        "reason": "Versioned OPC Foundation specification; publication date verified on publisher frontmatter",
+        "version": "1.05.06",
+        "publication_date": "2025-10-22",
+        "publication_source": "https://reference.opcfoundation.org/specs/OPC-10000-25",
+        "calendar_year_age": 1,
+        "maximum_years_used": 5,
+        "status": "WITHIN_LIMIT_USING_PUBLISHER_DATE"
+      },
+      {
+        "reference": 10,
+        "year": 2025,
+        "classification": "applied",
+        "reason": "Versioned OPC Foundation specification; publication date verified on publisher frontmatter",
+        "version": "1.05.06",
+        "publication_date": "2025-10-22",
+        "publication_source": "https://reference.opcfoundation.org/specs/OPC-10000-14",
+        "calendar_year_age": 1,
+        "maximum_years_used": 5,
+        "status": "WITHIN_LIMIT_USING_PUBLISHER_DATE"
+      },
+      {
+        "reference": 11,
+        "year": 2025,
+        "classification": "applied",
+        "reason": "Versioned OPC Foundation specification; publication date verified on publisher frontmatter",
+        "version": "1.05.06",
+        "publication_date": "2025-10-22",
+        "publication_source": "https://reference.opcfoundation.org/specs/OPC-10000-3",
+        "calendar_year_age": 1,
+        "maximum_years_used": 5,
+        "status": "WITHIN_LIMIT_USING_PUBLISHER_DATE"
+      },
+      {
+        "reference": 12,
+        "year": 2026,
+        "classification": "applied",
+        "reason": "Versioned OPC Foundation specification; publication date verified on publisher frontmatter",
+        "version": "1.05.07",
+        "publication_date": "2026-04-15",
+        "publication_source": "https://reference.opcfoundation.org/specs/OPC-10000-4",
+        "calendar_year_age": 0,
+        "maximum_years_used": 5,
+        "status": "WITHIN_LIMIT_USING_PUBLISHER_DATE"
+      },
+      {
+        "reference": 13,
+        "year": 2021,
+        "classification": "foundational",
+        "reason": "Age-of-information survey and definitions",
+        "calendar_year_age": 5,
+        "maximum_years_used": 10,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 14,
+        "year": 2024,
+        "classification": "applied",
+        "reason": "Industrial IoT scheduling application",
+        "calendar_year_age": 2,
+        "maximum_years_used": 5,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 15,
+        "year": 2017,
+        "classification": "foundational",
+        "reason": "Random-stream methodology; lecture slides, not a journal article",
+        "calendar_year_age": 9,
+        "maximum_years_used": 10,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 17,
+        "year": 2020,
+        "classification": "foundational",
+        "reason": "Bootstrap statistical methodology",
+        "calendar_year_age": 6,
+        "maximum_years_used": 10,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 18,
+        "year": 2019,
+        "classification": "foundational",
+        "reason": "Simulation reporting methodology and guidelines; first-online 2018, journal issue 2019",
+        "calendar_year_age": 7,
+        "maximum_years_used": 10,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 19,
+        "year": 2019,
+        "classification": "foundational",
+        "reason": "Research reproducibility methodology",
+        "calendar_year_age": 7,
+        "maximum_years_used": 10,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      },
+      {
+        "reference": 20,
+        "year": 2026,
+        "classification": "research_artifact",
+        "reason": "This article companion code/data",
+        "calendar_year_age": 0,
+        "maximum_years_used": 10,
+        "status": "WITHIN_LIMIT_USING_STATED_CLASSIFICATION"
+      }
+    ],
+    "undated_sources": [
+      {
+        "references": [
+          16
+        ],
+        "kind": "Versioned Python 3.12 documentation",
+        "note": "The Python 3.12 family was released on 2023-10-02; the living documentation remains cited as n.d., rather than assigning its individual paragraphs an unsupported date. Exact tested Python 3.12.14 is recorded in README.",
+        "release_source": "https://www.python.org/downloads/release/python-3120/"
+      }
+    ],
+    "oldest_dated_source": {
+      "reference": 15,
+      "year": 2017,
+      "age_years": 9
+    },
+    "material_dated_limit_violation_found": false
+  },
+  "metadata": {
+    "crossref_successfully_checked": [
+      1,
+      2,
+      6,
+      13,
+      14,
+      17,
+      18,
+      19
+    ],
+    "crossref_rate_limited": [
+      5,
+      7
+    ],
+    "material_mismatch_found_in_successful_checks": false,
+    "note": "For [18], Crossref first-online date is 2018-03-06 whereas volume13 issue1 is 2019; citing the journal issue as 2019 is valid, not an error. No citation-count or index status is inferred from Crossref."
+  },
+  "recommended_public_summary": "Twenty references are supplied. Six are published in journals with publisher-confirmed Scopus and Web of Science coverage (30%); individual records in both databases were not certified. One self-citation is present (5%). Under the foreign-issuing-organisation definition, nineteen sources are international (95%). Dated methodological/applied sources satisfy the stated age limits under the documented classification. OPC versions and publisher publication dates are recorded explicitly; Python is versioned living documentation.",
+  "applied_update": {
+    "reference": 8,
+    "replace_preprint": true,
+    "citation": "Hipler, R., Kallwies, H., Leucker, M., Montali, M., Sánchez, C., & Winkler, S. (2026). Symbolic runtime verification for monitoring under uncertainties and assumptions. Information and Software Technology, 191, Article 108004. https://doi.org/10.1016/j.infsof.2025.108004",
+    "metadata_sources": [
+      "https://www.sciencedirect.com/science/article/pii/S095058492500343X",
+      "https://www.isp.uni-luebeck.de/node/1503",
+      "https://dblp.org/rec/journals/infsof/HiplerKLMSW26.html"
+    ],
+    "note": "The DOI contains 2025 (online publication), while the journal issue and author bibliography use 2026. Preserve the full six-author extended-paper attribution.",
+    "status": "APPLIED_IN_SUBMISSION_R3"
+  }
+}

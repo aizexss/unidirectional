@@ -213,6 +213,8 @@ def main():
                 age_values[metric].append({'condition': condition, 'mode': mode, 'mean': mean, 'ci': [low, high]})
         ax.set_xticks([0, 1], ['Independent loss', 'Burst loss']); ax.set_ylabel(label)
         ax.grid(axis='y', alpha=.15)
+    axes[0].set_title('(a) Coherent-state age', loc='left', pad=3)
+    axes[1].set_title('(b) Fresh coherent availability', loc='left', pad=3)
     axes[0].legend(frameon=False, ncol=2); axes[1].set_ylim(0, 110)
     fig.tight_layout(pad=.65)
     save(fig, 5, age_values)

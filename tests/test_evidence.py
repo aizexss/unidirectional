@@ -62,4 +62,31 @@ class JournalContract(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'First citations'):
             audit.audit_journal_text(changed)
 
+
+class ManuscriptTableIdentity(unittest.TestCase):
+    def test_literature_table_does_not_shift_numerical_evidence(self):
+        expected = ['Condition', 'Mode', 'Mixed (%)']
+        numerical = [expected, ['C05', 'R0', '62.14']]
+        literature = [['Approach', 'Guarantee'], ['Snapshots', 'Atomic access']]
+        self.assertIs(audit.table_by_header([literature, numerical], expected), numerical)
+        self.assertIs(audit.table_by_header([numerical, literature], expected), numerical)
+
+    def test_missing_or_duplicated_numerical_table_cannot_pass(self):
+        expected = ['Condition', 'Mode']
+        numerical = [expected, ['C05', 'R0']]
+        for tables in ([], [numerical, numerical]):
+            with self.assertRaisesRegex(ValueError, 'Missing or duplicate manuscript table'):
+                audit.table_by_header(tables, expected)
+
+    def test_all_declared_rows_are_required_but_row_order_is_not_evidence(self):
+        table = [['Condition', 'Mode', 'Mixed (%)'], ['C05', 'R1', '0.00'], ['C05', 'R0', '62.14']]
+        audit.require_table_rows(table, 2, {('C05', 'R0'), ('C05', 'R1')})
+
+    def test_deleted_duplicate_and_truncated_rows_cannot_reduce_the_audit_scope(self):
+        header = ['Condition', 'Mode', 'Mixed (%)']
+        first, second = ['C05', 'R0', '62.14'], ['C05', 'R1', '0.00']
+        for rows in ([first], [first, second, second], [first, second[:-1]]):
+            with self.assertRaisesRegex(ValueError, 'Missing, duplicate or truncated manuscript table row'):
+                audit.require_table_rows([header, *rows], 2, {('C05', 'R0'), ('C05', 'R1')})
+
 if __name__=='__main__': unittest.main()

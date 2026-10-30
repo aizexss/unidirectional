@@ -29,23 +29,23 @@
   },
   {
     "number": 8,
-    "citation": "Kallwies, H., Leucker, M., & Sánchez, C. (2022). Symbolic runtime verification for monitoring under uncertainties and assumptions [Preprint]. arXiv. https://doi.org/10.48550/arXiv.2207.05678"
+    "citation": "Hipler, R., Kallwies, H., Leucker, M., Montali, M., Sánchez, C., & Winkler, S. (2026). Symbolic runtime verification for monitoring under uncertainties and assumptions. Information and Software Technology, 191, Article 108004. https://doi.org/10.1016/j.infsof.2025.108004"
   },
   {
     "number": 9,
-    "citation": "OPC Foundation. (n.d.). OPC Unified Architecture Part 25: Object Serialization (Section 4.5). Retrieved October 29, 2026, from https://reference.opcfoundation.org/specs/OPC-10000-25/4.5"
+    "citation": "OPC Foundation. (2025). OPC Unified Architecture Part 25: Object Serialization (Version 1.05.06, Section 4.5). https://reference.opcfoundation.org/specs/OPC-10000-25/4.5"
   },
   {
     "number": 10,
-    "citation": "OPC Foundation. (n.d.). OPC Unified Architecture Part 14: PubSub (Section 5.3.3). Retrieved October 29, 2026, from https://reference.opcfoundation.org/specs/OPC-10000-14/5.3.3"
+    "citation": "OPC Foundation. (2025). OPC Unified Architecture Part 14: PubSub (Version 1.05.06, Section 5.3.3). https://reference.opcfoundation.org/specs/OPC-10000-14/5.3.3"
   },
   {
     "number": 11,
-    "citation": "OPC Foundation. (n.d.). OPC Unified Architecture Part 3: Address Space Model (Section 8.58). Retrieved October 29, 2026, from https://reference.opcfoundation.org/specs/OPC-10000-3/8.58"
+    "citation": "OPC Foundation. (2025). OPC Unified Architecture Part 3: Address Space Model (Version 1.05.06, Section 8.58). https://reference.opcfoundation.org/specs/OPC-10000-3/8.58"
   },
   {
     "number": 12,
-    "citation": "OPC Foundation. (n.d.). OPC Unified Architecture Part 4: Services (Section 5.11.2). Retrieved October 29, 2026, from https://reference.opcfoundation.org/specs/OPC-10000-4/5.11.2"
+    "citation": "OPC Foundation. (2026). OPC Unified Architecture Part 4: Services (Version 1.05.07, Section 5.11.2). https://reference.opcfoundation.org/specs/OPC-10000-4/5.11.2"
   },
   {
     "number": 13,
@@ -77,6 +77,6 @@
   },
   {
     "number": 20,
-    "citation": "Ibragimov, A. (2026). Snapshot coherence in unidirectional industrial telemetry (Version article1-submission-20261030-r2) [Source code and synthetic data]. GitHub. https://github.com/aizexss/unidirectional/tree/article1-submission-20261030-r2"
+    "citation": "Ibragimov, A. (2026). Snapshot coherence in unidirectional industrial telemetry (Version article1-submission-20261030-r3) [Source code and synthetic data]. GitHub. https://github.com/aizexss/unidirectional/tree/article1-submission-20261030-r3"
   }
 ]

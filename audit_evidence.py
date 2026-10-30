@@ -187,6 +187,22 @@ def rounded_percentage(rows, numerator, denominator='slots'):
     return str(decimal.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP))
 
 
+def table_by_header(tables, expected):
+    """Locate a numerical table by its meaning rather than its layout position."""
+    normalize = lambda cells: tuple(''.join(cell.split()) for cell in cells)
+    matches = [table for table in tables if table and normalize(table[0]) == normalize(expected)]
+    require(len(matches) == 1, 'Missing or duplicate manuscript table: ' + expected[0])
+    return matches[0]
+
+
+def require_table_rows(table, key_columns, expected_keys):
+    rows = table[1:]
+    keys = [tuple(row[:key_columns]) for row in rows]
+    require(all(len(row) == len(table[0]) for row in rows)
+            and len(keys) == len(set(keys)) and set(keys) == set(expected_keys),
+            'Missing, duplicate or truncated manuscript table row')
+
+
 def audit_manuscript(study, manuscript):
     article = manuscript / 'Ibragimov_Aibar_Article_Revised.docx'
     tables, artwork = manuscript_content(article)
@@ -198,27 +214,32 @@ def audit_manuscript(study, manuscript):
     require(len(equations) == 10 and all(e.get('ProgID') == 'Equation.DSMT4' and e.get('Type') == 'Embed'
                                        for e in equations), 'Expected ten embedded MathType equations')
     require(not root.findall('.//m:oMath', NS), 'Unconverted native Word equation remains')
-    require(len(tables) == 8 and len(artwork) == 6, 'Unexpected manuscript structure')
+    require(len(tables) == 9 and len(artwork) == 6, 'Unexpected manuscript structure')
     with (study / 'simulation/run_metrics.csv').open(encoding='utf-8', newline='') as source:
         runs = list(csv.DictReader(source))
     checked = 0
-    for row in tables[5][1:]:
+    publication_table = table_by_header(tables, ['Condition', 'Mode', 'Mixed (%)', 'Complete (%)', 'Fresh coherent (%)'])
+    coverage_table = table_by_header(tables, ['Condition', 'α', 'Actual mixed (%)', 'V coverage (%)', 'Hidden mixed (%)', 'Detected given mixed (%)'])
+    require_table_rows(publication_table, 2,
+                       {(condition, mode) for condition in ('C04', 'C05', 'C06', 'C10', 'C11', 'C12') for mode in ('R0', 'R1')})
+    require_table_rows(coverage_table, 1, {(condition,) for condition in ('C02', 'C05', 'C08')})
+    for row in publication_table[1:]:
         condition, mode = row[:2]
         selected = [r for r in runs if r['condition'] == condition and r['publication'] == mode]
         require(len(selected) == 40, 'Missing table runs')
         for shown, fields in zip(row[2:], (('mixed',), ('coherent', 'mixed'), ('fresh_coherent',))):
-            require(shown == rounded_percentage(selected, fields), f'Table 6 differs: {condition} {mode} {fields}')
+            require(shown == rounded_percentage(selected, fields), f'Publication table differs: {condition} {mode} {fields}')
             checked += 1
-    for row in tables[6][1:]:
+    for row in coverage_table[1:]:
         selected = [r for r in runs if r['condition'] == row[0] and r['publication'] == 'R0']
         require(len(selected) == 40, 'Missing table runs')
         for shown, fields, denominator in zip(row[2:], (('mixed',), ('V_conclusive',), ('hidden_mixed',), ('detected_mixed',)), ('slots', 'slots', 'slots', 'mixed')):
-            require(shown == rounded_percentage(selected, fields, denominator), 'Table 7 differs: ' + row[0])
+            require(shown == rounded_percentage(selected, fields, denominator), 'Coverage table differs: ' + row[0])
             checked += 1
     for index, content in enumerate(artwork, 1):
         path = manuscript / 'figures' / f'figure-{index}.png'
         require(path.is_file() and path.read_bytes() == content, f'Published figure {index} differs from the Word manuscript')
-    return {'simulation_table_cells': checked, 'exact_manuscript_figures': len(artwork),
+    return {'simulation_table_cells': checked, 'manuscript_tables': len(tables), 'exact_manuscript_figures': len(artwork),
             'embedded_mathtype_equations': len(equations), **journal}
 
 
