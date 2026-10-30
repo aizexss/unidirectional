@@ -2,7 +2,7 @@
 
 Companion code and synthetic data for **Verifying State Snapshot Coherence in Unidirectional Industrial Telemetry**, by Aibar Ibragimov, Leila Rzayeva and Laura Aldasheva.
 
-This public repository contains the source code, synthetic data and manuscript. The publication version is tagged `article1-submission-20261030`. No account or access request is needed to download the materials.
+This public repository contains the source code, synthetic data and manuscript. The publication version is tagged `article1-submission-20261030-r2`. No account or access request is needed to download the materials.
 
 ## Run the study
 

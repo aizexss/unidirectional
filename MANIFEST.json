@@ -21,8 +21,8 @@
   },
   {
     "path": "docs/REFERENCES.json",
-    "bytes": 5285,
-    "sha256": "052e3f6e9b8e28b361d8f9d37a232ce9d5dbd1949d02ed7d9f230ff987886b05"
+    "bytes": 5291,
+    "sha256": "15e074cb022c955ccbffb6b393033949fc3cd44b0798b7e75997919422e8d2ce"
   },
   {
     "path": "docs/TRACEABILITY.md",
@@ -66,8 +66,8 @@
   },
   {
     "path": "manuscript/Ibragimov_Aibar_Article_Revised.docx",
-    "bytes": 852393,
-    "sha256": "069945db465dca5a3b86e3f9a159631207f56125e007a58a9bb28038698b4969"
+    "bytes": 852088,
+    "sha256": "c4c7246451cbde382a56c2b9eeecb2729d3f2ceda96fbe0d546f96de008264f4"
   },
   {
     "path": "plot_figures.py",
@@ -76,13 +76,13 @@
   },
   {
     "path": "README.md",
-    "bytes": 6499,
-    "sha256": "f59a1bc6cddd86ae2c02e61d9b86cef36c6d98acb313f1ebfaec3e6d5574a40a"
+    "bytes": 6502,
+    "sha256": "389fbdb65e8b1c6dda3dc3c1bfb158c9958455b63c4e36230193400dc6bcc2ad"
   },
   {
     "path": "README_RU.md",
-    "bytes": 6713,
-    "sha256": "e29fcad7789bb775abb5d3311c15410a79124c3c54b0fdcf8b743cc3279dbf31"
+    "bytes": 6716,
+    "sha256": "0606ae4b805a8d06d2e6d80ab8c91c40c70fc8a768d8a44c83b6e5e7dad36c93"
   },
   {
     "path": "reproduce.py",
